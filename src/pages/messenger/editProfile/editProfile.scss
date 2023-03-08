@@ -1,0 +1,25 @@
+@import '../../../styles/variables';
+
+.save-button {
+  background-color: $primary;
+  padding: 12px 70px;
+  transition: background 0.2s;
+
+  border: 0;
+  border-radius: 8px;
+
+  font-weight: 500;
+  font-size: 14px;
+
+  color: white;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  &:hover {
+    background: $primary-hovered;
+    transition: background 0.2s;
+  }
+}
