@@ -4,38 +4,39 @@ html(lang='ru')
     head
         link(rel="stylesheet", href="../login/main.scss")
     body
-        div(class='auth-container')
-            div(class='auth-layout') Регистрация
-            form
-                div(class='input-container')
-                    div(class='input-layout') Почта
-                    input(type='text', name='email')
+        main
+            div(class='auth-container')
+                div(class='auth-layout') Регистрация
+                form
+                    div(class='input-container')
+                        p(class='input-layout') Почта
+                        input(type='text', name='email')
 
-                div(class='input-container')
-                    div(class='input-layout') Логин
-                    input(type='text', name='login')
+                    div(class='input-container')
+                        p(class='input-layout') Логин
+                        input(type='text', name='login')
 
-                div(class='input-container')
-                    div(class='input-layout') Имя
-                    input(type='text', name='first_name')
+                    div(class='input-container')
+                        p(class='input-layout') Имя
+                        input(type='text', name='first_name')
 
-                div(class='input-container')
-                    div(class='input-layout') Фамилия
-                    input(type='text', name='second_name')
+                    div(class='input-container')
+                        p(class='input-layout') Фамилия
+                        input(type='text', name='second_name')
 
-                div(class='input-container')
-                    div(class='input-layout') Телефон
-                    input(type='text', name='phone')
+                    div(class='input-container')
+                        p(class='input-layout') Телефон
+                        input(type='text', name='phone')
 
-                div(class='input-container')
-                    div(class='input-layout') Пароль
-                    input(type='password', name='password')
+                    div(class='input-container')
+                        p(class='input-layout') Пароль
+                        input(type='password', name='password')
 
-                div(class='input-container')
-                    div(class='input-layout') Пароль (еще раз)
-                    input( type='password', name='password_repeat')
+                    div(class='input-container')
+                        p(class='input-layout') Пароль (еще раз)
+                        input( type='password', name='password_repeat')
 
-                div(class='auth-buttons')
-                    button(class='custom-button') Зарегестрироваться
-                    div(class='custom-link')
-                        a(href='../login/index.pug') Войти
+                    div(class='auth-buttons')
+                        button(class='custom-button') Зарегистрироваться
+                        div(class='custom-link')
+                            a(href='../login/index.pug') Войти

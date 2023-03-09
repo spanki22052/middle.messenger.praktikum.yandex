@@ -5,49 +5,50 @@ html(lang='ru')
         link(rel="stylesheet", href="./messenger.scss")
         link(rel="stylesheet", href="../../home/login/main.scss")
     body
-        div(class='messenger-container')
-            div(class='chats-container')
-                a(class='profile-link', href='../profile/profile.pug') Профиль >
-                input(class='chat-searchbar' placeholder="Поиск")
-                div(class='chat-blocks')
-                    div(class='chat-block')
-                        div(class='left-side')
-                            div(class='image')
-                        div(class='right-side')
-                            a(class='clear-a', href='../chat/chat.pug')
+        main
+            div(class='messenger-container')
+                div(class='chats-container')
+                    a(class='profile-link', href='../profile/profile.pug') Профиль >
+                    input(class='chat-searchbar' placeholder="Поиск")
+                    div(class='chat-blocks')
+                        div(class='chat-block')
+                            div(class='left-side')
+                                div(class='image')
+                            div(class='right-side')
+                                a(class='clear-a', href='../chat/chat.pug')
+                                    div(class='upside')
+                                        p(class='sender-name') Андрей
+                                        p(class='message-time') 10:49
+                                    p(class='message') Изображение
+                                    div(class='badge') 2
+
+                        div(class='chat-block')
+                            div(class='left-side')
+                                div(class='image')
+                            div(class='right-side')
                                 div(class='upside')
-                                    div(class='sender-name') Андрей
-                                    div(class='message-time') 10:49
-                                div(class='message') Изображение
-                                div(class='badge') 2
+                                    p(class='sender-name') Андрей
+                                    p(class='message-time') 15:21
+                                p(class='message') Изображение
+                                div(class='badge') 12
 
-                    div(class='chat-block')
-                        div(class='left-side')
-                            div(class='image')
-                        div(class='right-side')
-                            div(class='upside')
-                                div(class='sender-name') Андрей
-                                div(class='message-time') 15:21
-                            div(class='message') Изображение
-                            div(class='badge') 12
+                        div(class='chat-block')
+                            div(class='left-side')
+                                div(class='image')
+                            div(class='right-side')
+                                div(class='upside')
+                                    p(class='sender-name') Андрей
+                                    p(class='message-time') Пн
+                                p(class='message') Изображение
 
-                    div(class='chat-block')
-                        div(class='left-side')
-                            div(class='image')
-                        div(class='right-side')
-                            div(class='upside')
-                                div(class='sender-name') Андрей
-                                div(class='message-time') Пн
-                            div(class='message') Изображение
+                        div(class='chat-block')
+                            div(class='left-side')
+                                div(class='image')
+                            div(class='right-side')
+                                div(class='upside')
+                                    p(class='sender-name') Андрей
+                                    p(class='message-time') 10:49
+                                p(class='message') Изображение
 
-                    div(class='chat-block')
-                        div(class='left-side')
-                            div(class='image')
-                        div(class='right-side')
-                            div(class='upside')
-                                div(class='sender-name') Андрей
-                                div(class='message-time') 10:49
-                            div(class='message') Изображение
-
-            div(class='chat-container')
-                div(class='choose-chat-layout') Выберите чат чтобы отправить сообщение
+                div(class='chat-container')
+                    p(class='choose-chat-layout') Выберите чат чтобы отправить сообщение
