@@ -28,9 +28,7 @@ export default `
           </div>
         </div>
         <br>
-        <button class='save-button'>
-          <a href='/profile'>Сохранить</a>
-        </button>
+        {{{button}}}
       </form>
     </div>
 </main>
