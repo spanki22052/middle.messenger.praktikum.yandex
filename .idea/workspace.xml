@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0698993c-088d-4b8a-b2c9-cbaf11d643be" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.parcel-cache/0e613961dce44a82" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/0e613961dce44a82" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.parcel-cache/13776de4870b0ae4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/13776de4870b0ae4.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.parcel-cache/1d11806abf58443d" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/1d11806abf58443d" afterDir="false" />
@@ -13,7 +12,6 @@
       <change beforePath="$PROJECT_DIR$/.parcel-cache/839725f60ad82a5f" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/839725f60ad82a5f" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.parcel-cache/a9f5484dda8bfe2c" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/a9f5484dda8bfe2c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.parcel-cache/data.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/data.mdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +116,7 @@
       <workItem from="1682856273699" duration="7600000" />
       <workItem from="1682941958904" duration="9976000" />
       <workItem from="1683017207763" duration="5220000" />
-      <workItem from="1683026960591" duration="1295000" />
+      <workItem from="1683026960591" duration="1810000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1678198627227</created>
