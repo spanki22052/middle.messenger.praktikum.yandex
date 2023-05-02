@@ -2,81 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0698993c-088d-4b8a-b2c9-cbaf11d643be" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.stylelintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Button/ButtonTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Button/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ChatMessage/ChatMessageTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ChatMessage/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ChatSidebarBlock/ChatSidebarBlockTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ChatSidebarBlock/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Input/InputTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Input/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/InputWithLayout/InputWithLayoutTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/InputWithLayout/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Link/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/Block/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/Block/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/EventBus/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/EventBus/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/FormValidator/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/formEvents/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/formEvents/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/renderDom/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ChangePassword/ChangePasswordTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ChangePassword/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Chat/ChatTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Chat/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/EditProfile/EditProfileTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/EditProfile/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Error404/Error404Template.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Error404/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Error500/Error500Template.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Error500/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Login/LoginTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Login/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Messenger/MessengerTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Messenger/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Profile/ProfileTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Profile/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Register/RegisterPageTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Register/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/setStyles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/0e613961dce44a82" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/0e613961dce44a82" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/13776de4870b0ae4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/13776de4870b0ae4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/1d11806abf58443d" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/1d11806abf58443d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/35c20fb91e350b46" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/35c20fb91e350b46" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/37dbec41244c32ee.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/37dbec41244c32ee.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/3b15f003e4aada7f" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/3b15f003e4aada7f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/7c901be8e1fcacd1" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/7c901be8e1fcacd1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/839725f60ad82a5f" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/839725f60ad82a5f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/a9f5484dda8bfe2c" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/a9f5484dda8bfe2c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/data.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/data.mdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.parcelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/errors/404.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/errors/500.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/errors/errors.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/login/index.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/login/main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/register/register.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/messenger/changePassword/changePassword.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/messenger/chat/chat.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/messenger/editProfile/editProfile.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/messenger/editProfile/editProfile.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/messenger/messenger/messenger.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/messenger/messenger/messenger.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/messenger/profile/profile.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/messenger/profile/profile.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +106,7 @@
       <workItem from="1682696341463" duration="15704000" />
       <workItem from="1682856273699" duration="7600000" />
       <workItem from="1682941958904" duration="9976000" />
-      <workItem from="1683017207763" duration="3499000" />
+      <workItem from="1683017207763" duration="5220000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1678198627227</created>
@@ -210,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678383497638</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update">
+      <created>1683021315435</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683021315435</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
