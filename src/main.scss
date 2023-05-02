@@ -497,12 +497,20 @@ body {
         padding: 10px 0;
         box-sizing: content-box;
 
-        input {
-          border: 0;
+        .input-container-ui {
+          max-width: 250px;
 
-          &:focus {
-            outline: none;
-          }
+            .error-message {
+              color: red;
+            }
+
+            input {
+              border: 0;
+
+              &:focus {
+                outline: none;
+              }
+            }
         }
 
         &:not(:last-child) {

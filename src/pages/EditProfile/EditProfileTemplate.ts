@@ -15,33 +15,27 @@ export default `
             <div class='user-info-box'>
                 <div class='item'>
                     <label>Почта</label>
-                    <input value='example@example.com' type='email' name='email'>
+                    {{{email}}}
                 </div>
                 <div class='item'>
                     <label>Логин</label>
-                    <input value='john239' type='text' name='login'>
+                    {{{login}}}
                 </div>
                 <div class='item'>
                     <label>Имя</label>
-                    <input value='Джон' type='text' name='first_name'>
+                    {{{firstName}}}
                 </div>
                 <div class='item'>
                     <label>Фамилия</label>
-                    <input value='Джонов' type='text' name='second_name'>
-                </div>
-                <div class='item'>
-                    <label>Имя в чате</label>
-                    <input value='Джонет' type='text' name='display_name'>
+                    {{{secondName}}}
                 </div>
                 <div class='item'>
                     <label>Телефон</label>
-                    <input value='+7 (909) 967 30 30' type='text' name='phone'>
+                    {{{phone}}}
                 </div>
             </div>
             <br>
-            <button class='save-button'>
-                <a href='/profile'>Сохранить</a>
-            </button>
+            {{{button}}}
         </form>
     </div>
 </main>
