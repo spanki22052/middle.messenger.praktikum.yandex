@@ -4,6 +4,7 @@ export default `
       <div class='left-side'>
         <div class='send-button'>
           <a href='/messenger'>
+          Назад
             <img src='../../../static/icons/right-arrow.svg' style='transform: rotate(180deg);' alt="">
           </a>
         </div>
@@ -15,15 +16,15 @@ export default `
         <div class='user-info-box'>
           <div class='item'>
             <label for='old_password'>Старый пароль</label>
-            <input id='old_password' type='password' name='email' value='tigro000'>
+            {{{oldPassword}}}
           </div>
           <div class='item'>
-            <label for='login'>Логин</label>
-            <input id='login' type='password' name='login' value='tigro000'>
+            <label for='login'>Новый пароль</label>
+            {{{newPassword}}}
           </div>
           <div class='item'>
-            <label for='first_name'>Имя</label>
-            <input id='first_name' type='password' name='first_name' value='tigro123777'>
+            <label for='first_name'>Повторите новый пароль</label>
+            {{{repeatNewPassword}}}
           </div>
         </div>
         <br>

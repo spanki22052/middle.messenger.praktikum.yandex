@@ -3,7 +3,8 @@ export default `
 <div class="profile-page-container">
   <div class="left-side">
     <div class="send-button">
-      <a href="../chat">
+      <a href="/messenger">
+        Назад
         <img src="../../../static/icons/right-arrow.svg" style="transform: rotate(180deg);" alt="">
       </a>
     </div>

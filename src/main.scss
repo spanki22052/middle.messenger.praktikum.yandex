@@ -441,6 +441,11 @@ body {
   justify-content: center;
   align-items: center;
 
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
   &:hover {
     background: $primary-hovered;
   }
@@ -506,6 +511,8 @@ body {
 
             input {
               border: 0;
+              border-bottom: 1px solid $dark-gray;
+              height: 30px;
 
               &:focus {
                 outline: none;

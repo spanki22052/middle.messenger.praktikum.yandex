@@ -5,6 +5,7 @@ export default `
             <div class='send-button'>
                 <a href='/messenger'>
                     <img src='../../../static/icons/right-arrow.svg' style='transform: rotate(180deg);' alt="">
+                    Назад
                 </a>
             </div>
         </div>
