@@ -32,6 +32,6 @@ const pageRoutes: { [key: string]: Block } = {
   "/500": error500,
 };
 
-const location = pageRoutes[window.location.pathname];
+const location = pageRoutes[window.location.pathname] || error404;
 
 renderDOM(location, "root");
