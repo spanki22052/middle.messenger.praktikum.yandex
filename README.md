@@ -24,4 +24,4 @@
   `
 ### Ссылка на netlify
 
-- 
+- `https://sprint-2--adorable-khapse-88c028.netlify.app/`
