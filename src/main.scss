@@ -1,4 +1,11 @@
-@import url('./styles/_variables.scss');
+$primary: #3369f3;
+$primary-hovered: #2f62e5;
+$dark-gray: #999;
+$light-gray: #eaeaea;
+$text-dark: #1e1e1e;
+$light-block-gray: #fbfbfb;
+$light-profile-pic: #efefef;
+$error: #f00;
 
 * {
   font-family: Inter, sans-serif;
