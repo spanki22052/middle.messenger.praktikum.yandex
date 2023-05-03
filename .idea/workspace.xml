@@ -13,7 +13,6 @@
       <change beforePath="$PROJECT_DIR$/.parcel-cache/839725f60ad82a5f" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/839725f60ad82a5f" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.parcel-cache/a9f5484dda8bfe2c" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/a9f5484dda8bfe2c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.parcel-cache/data.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/data.mdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +119,7 @@
       <workItem from="1683017207763" duration="5220000" />
       <workItem from="1683026960591" duration="3743000" />
       <workItem from="1683039794651" duration="4342000" />
-      <workItem from="1683128004684" duration="3275000" />
+      <workItem from="1683128004684" duration="4154000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1678198627227</created>
