@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0698993c-088d-4b8a-b2c9-cbaf11d643be" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.parcel-cache/0e613961dce44a82" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/0e613961dce44a82" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.parcel-cache/13776de4870b0ae4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/13776de4870b0ae4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.parcel-cache/1d11806abf58443d" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/1d11806abf58443d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.parcel-cache/35c20fb91e350b46" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/35c20fb91e350b46" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.parcel-cache/37dbec41244c32ee.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/37dbec41244c32ee.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.parcel-cache/3b15f003e4aada7f" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/3b15f003e4aada7f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.parcel-cache/7c901be8e1fcacd1" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/7c901be8e1fcacd1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.parcel-cache/839725f60ad82a5f" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/839725f60ad82a5f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.parcel-cache/a9f5484dda8bfe2c" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/a9f5484dda8bfe2c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.parcel-cache/data.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/data.mdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="sprint_1" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MMUN6MxdPFpyi22TkcwrPVZDfu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Git/frontend-compass",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\m.makiev\\AppData\\Roaming\\npm\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
+    "ts.external.directory.path": "C:\\Git\\middle.messenger.praktikum.yandex1\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Git\middle.messenger.praktikum.yandex\src\pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Git\middle.messenger.praktikum.yandex1\static\img" />
+      <recent name="C:\Git\middle.messenger.praktikum.yandex1\src\pages\Chat" />
+      <recent name="C:\Git\middle.messenger.praktikum.yandex1\src\pages\messenger" />
+      <recent name="C:\Git\middle.messenger.praktikum.yandex1\src\pages\Profile" />
+      <recent name="C:\Git\middle.messenger.praktikum.yandex1\src\pages\EditProfile" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start">
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.dev" />
+      <item itemvalue="npm.start" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0698993c-088d-4b8a-b2c9-cbaf11d643be" name="Changes" comment="" />
+      <created>1677576901588</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677576901588</updated>
+      <workItem from="1677576904115" duration="8779000" />
+      <workItem from="1677743236243" duration="5005000" />
+      <workItem from="1677765357233" duration="25988000" />
+      <workItem from="1678175204178" duration="3157000" />
+      <workItem from="1678192333450" duration="6432000" />
+      <workItem from="1678267271824" duration="368000" />
+      <workItem from="1678306739960" duration="799000" />
+      <workItem from="1678308962427" duration="24989000" />
+      <workItem from="1678626464839" duration="23402000" />
+      <workItem from="1679826219367" duration="2650000" />
+      <workItem from="1679901725496" duration="22000" />
+      <workItem from="1681904006485" duration="3623000" />
+      <workItem from="1681937945581" duration="11873000" />
+      <workItem from="1682236991436" duration="14261000" />
+      <workItem from="1682320657748" duration="66737000" />
+      <workItem from="1682579933480" duration="15000" />
+      <workItem from="1682588500917" duration="188000" />
+      <workItem from="1682627121153" duration="5684000" />
+      <workItem from="1682696341463" duration="15704000" />
+      <workItem from="1682856273699" duration="7600000" />
+      <workItem from="1682941958904" duration="9976000" />
+      <workItem from="1683017207763" duration="5220000" />
+      <workItem from="1683026960591" duration="3743000" />
+      <workItem from="1683039794651" duration="4342000" />
+      <workItem from="1683128004684" duration="4940000" />
+    </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1678198627227</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678198627227</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update">
+      <created>1678383408470</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678383408470</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update">
+      <created>1678383437472</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678383437472</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update">
+      <created>1678383497638</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678383497638</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update">
+      <created>1683021315435</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683021315435</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/index.js" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
