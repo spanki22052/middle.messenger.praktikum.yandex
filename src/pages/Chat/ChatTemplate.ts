@@ -68,7 +68,7 @@ export default `
         <p class="timestamp">11:56</p>
       </div>
       <div class="sender-photo-block">
-        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRulqK78KWzqbK94soH0jixCD9QED--mbdp9Dm9zYdql3sFB73oyBe75e9nn5MN36SNcwVU_oBQ_F4WsqraRZZSwNMMEJ1HkTWF-1SAwt1jLjtGf164IfcX&usqp=CAE" alt=""/>
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRulqK78KWzqbK94soH0jixCD9QED--mbdp9Dm9zYdql3sFB73oyBe75e9nn5MN36SNcwVU_oBQ_F4WsqraRZZSwNMMEJ1HkTWF-1SAwt1jLjtGf164IfcX&usqp=CAE" alt="картинка"/>
         <div class="timestamp">11:56</div>
       </div>
     </div>

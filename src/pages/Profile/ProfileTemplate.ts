@@ -5,13 +5,13 @@ export default `
     <div class="send-button">
       <a href="/messenger">
         Назад
-        <img src="../../../static/icons/right-arrow.svg" style="transform: rotate(180deg);" alt="">
+        <img src="../../../static/icons/right-arrow.svg" style="transform: rotate(180deg);" alt="назад">
       </a>
     </div>
   </div>
   <div class="profile-content-box">
     <div class="profile-pic-box">
-      <img src="../../../static/icons/image-icon.svg" alt="">
+      <img src="../../../static/icons/image-icon.svg" alt="профиль">
     </div>
     <div class="profile-name">Иван</div>
     <div class="user-info-box">

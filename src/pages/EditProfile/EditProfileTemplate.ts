@@ -4,14 +4,14 @@ export default `
         <div class='left-side'>
             <div class='send-button'>
                 <a href='/messenger'>
-                    <img src='../../../static/icons/right-arrow.svg' style='transform: rotate(180deg);' alt="">
+                    <img src='../../../static/icons/right-arrow.svg' style='transform: rotate(180deg);' alt="назад"> 
                     Назад
                 </a>
             </div>
         </div>
         <form class='profile-content-box'>
             <button type='button' name='avatar' class='profile-pic-box editable'>
-                <img src='../../../static/icons/image-icon.svg' alt="">
+                <img src='../../../static/icons/image-icon.svg' alt="avatar">
             </button>
             <div class='user-info-box'>
                 <div class='item'>
