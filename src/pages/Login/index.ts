@@ -3,6 +3,8 @@ import { InputWithLayout } from "../../components/InputWithLayout";
 import { Button } from "../../components/Button";
 import LoginTemplate from "./LoginTemplate";
 import formEvents from "../../core/formEvents";
+import FormValidator from "../../core/FormValidator";
+import AuthenticationController from "../../controllers/authenticationController";
 
 class Index extends Block {
   constructor() {
@@ -29,7 +31,7 @@ class Index extends Block {
 
     super(
       "div",
-      {},
+      { type: "submit" },
       {
         login,
         password,
@@ -37,9 +39,32 @@ class Index extends Block {
       },
       {
         input: (event: Event) => formEvents.getInput(event, state),
-        submit: (event: Event) => formEvents.submit(event, state),
+        submit: (event: Event) => {
+          event.preventDefault();
+
+          const form = event.target as HTMLFormElement;
+
+          const validateForm = FormValidator.validateSubmit(form);
+
+          const payload: { [key: string]: string } = {
+            email: "",
+            password: "",
+          };
+
+          Object.values(self.children).forEach((element) => {
+            payload[element.props.name] = element.props.value;
+          });
+
+          const dataToString = JSON.stringify(payload);
+
+          if (validateForm) {
+            AuthenticationController.signin(dataToString, self.children);
+          }
+        },
       }
     );
+
+    const self = this;
   }
 
   render() {

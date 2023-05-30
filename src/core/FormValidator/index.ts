@@ -130,8 +130,11 @@ export default class FormValidator {
   static verifyElement(element: HTMLInputElement): { [key: string]: string } {
     const { name, value } = element;
 
-    const error = FormValidator.formValidationEntries[name](value);
+    if (FormValidator.formValidationEntries[name]) {
+      const error = FormValidator.formValidationEntries[name](value);
+      return { value, error };
+    }
 
-    return { value, error };
+    return { value };
   }
 }
