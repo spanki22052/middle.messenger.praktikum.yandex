@@ -34,6 +34,7 @@ const formEvents: FormEventsInterface = {
 
     const { value } = element;
     Object.assign(state, { [elementName]: value });
+    console.log("formInputValues", state);
   },
 
   submit: (event, state) => {

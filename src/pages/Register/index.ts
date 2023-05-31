@@ -3,8 +3,6 @@ import { RegisterPageTemplate } from "./RegisterPageTemplate";
 import { InputWithLayout } from "../../components/InputWithLayout";
 import { Button } from "../../components/Button";
 import formEvents from "../../core/formEvents";
-import FormValidator from "../../core/FormValidator";
-import AuthenticationController from "../../controllers/authenticationController";
 
 class Register extends Block {
   constructor() {
@@ -89,7 +87,6 @@ class Register extends Block {
     const button = new Button({
       type: "submit",
       text: "Регистрация",
-      className: "custom-button",
     });
 
     super(
@@ -107,36 +104,9 @@ class Register extends Block {
       },
       {
         input: (event: Event) => formEvents.getInput(event, state),
-        submit: (event: Event) => {
-          event.preventDefault();
-
-          const form = event.target as HTMLFormElement;
-
-          const validateForm = FormValidator.validateSubmit(form);
-
-          const payload: { [key: string]: string } = {
-            first_name: "",
-            second_name: "",
-            login: "",
-            email: "",
-            password: "",
-            phone: "",
-          };
-
-          Object.values(self.children).forEach((element) => {
-            payload[element.props.name] = element.props.value;
-          });
-
-          const dataToString = JSON.stringify(payload);
-
-          if (validateForm) {
-            AuthenticationController.signup(dataToString, self.children);
-          }
-        },
+        submit: (event: Event) => formEvents.submit(event, state),
       }
     );
-
-    const self = this;
   }
 
   render() {

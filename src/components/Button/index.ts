@@ -3,11 +3,8 @@ import Block from "../../core/Block";
 import ButtonTemplate from "./ButtonTemplate";
 
 export class Button extends Block {
-  constructor(
-    props: MetaPropsInterface,
-    events?: { [key: string]: (event: Event) => void }
-  ) {
-    super("button", props, {}, events);
+  constructor(props: MetaPropsInterface) {
+    super("button", props);
   }
 
   render() {

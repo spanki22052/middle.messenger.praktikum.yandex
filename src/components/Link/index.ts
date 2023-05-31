@@ -1,29 +1,18 @@
 import Block from "../../core/Block";
 import { MetaPropsInterface } from "../../core/Block/types";
-import Router from "../../core/Router";
-import ChatController from "../../controllers/chatController";
-import linkTemplate from "./linkTemplate";
 
 export class Link extends Block {
   constructor(props: MetaPropsInterface) {
-    super(
-      "div",
-      props,
-      {},
-      {
-        click: (event: Event) => {
-          event.preventDefault();
-          Router.go(props.href);
-
-          if (props.href === "/messenger") {
-            ChatController.leaveChatPage();
-          }
-        },
-      }
-    );
+    super("div", props);
   }
 
   render() {
-    return this.compile(linkTemplate);
+    return `<a href=${this.props?.href || this._meta.props.href}>${
+      this.props?.text || this._meta.props.text
+    } </a>`;
   }
 }
+
+export const genLink = (props: MetaPropsInterface) => {
+  return new Link(props).getContent();
+};
