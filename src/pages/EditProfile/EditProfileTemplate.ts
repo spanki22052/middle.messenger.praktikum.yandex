@@ -3,16 +3,11 @@ export default `
     <div class='profile-page-container'>
         <div class='left-side'>
             <div class='send-button'>
-                <a href='/messenger'>
-                    <img src='../../../static/icons/right-arrow.svg' style='transform: rotate(180deg);' alt="назад"> 
-                    Назад
-                </a>
+                {{{exitButton}}}
             </div>
         </div>
         <form class='profile-content-box'>
-            <button type='button' name='avatar' class='profile-pic-box editable'>
-                <img src='../../../static/icons/image-icon.svg' alt="avatar">
-            </button>
+                {{{userPicture}}}
             <div class='user-info-box'>
                 <div class='item'>
                     <label>Почта</label>
@@ -36,6 +31,8 @@ export default `
                 </div>
             </div>
             <br>
+            
+            {{{linkToPassword}}}
             {{{button}}}
         </form>
     </div>
