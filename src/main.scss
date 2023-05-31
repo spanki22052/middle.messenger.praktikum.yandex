@@ -115,6 +115,10 @@ body {
 .custom-link {
   width: 100%;
   text-align: center;
+  font-weight: 500;
+  color: $primary;
+  cursor: pointer;
+  text-decoration: none;
 
   a {
     font-weight: 500;
@@ -334,10 +338,9 @@ body {
 
       .messages-display-heading-dots-dropdown {
         display: none;
-
         position: absolute;
         background: white;
-        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 15%);
         right: 80%;
         padding: 20px;
 
@@ -767,14 +770,6 @@ body {
 .profile-small {
   height: 200px;
   flex: 0 !important;
-}
-
-
-.custom-link {
-  font-weight: 500;
-  color: $primary;
-  cursor: pointer;
-  text-decoration: none;
 }
 
 .chat-user-image {
