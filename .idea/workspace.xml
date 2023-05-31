@@ -2,61 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0698993c-088d-4b8a-b2c9-cbaf11d643be" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/api/authentication.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/chats.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/userProfile.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/avatar.avif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/avatar2.avif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/back.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/dots.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AddUsers/AddUsersTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AddUsers/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ButtonComponent/ButtonTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ButtonComponent/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ChatListComponent/ChatListTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ChatListComponent/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ChatSearchInput/ChatSearchInputTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ChatSearchInput/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ChatsComponent/ChatsComponentTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ChatsComponent/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/DeleteUsers/DeleteUsersTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/DeleteUsers/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/EditablePicture/EditablePictureTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/EditablePicture/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ExitButtonComponent/ExitButtonTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ExitButtonComponent/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Link/linkTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Message/MessageTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Message/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NoSelectedChatComponent/NoSelectedChatTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NoSelectedChatComponent/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SearchedUsersComponent/SearchedUsersTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SearchedUsersComponent/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SelectChat/SelectChatComponent.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SelectChat/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SendMessage/SendMessageTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SendMessage/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UserInformationComponent/UserInformationTemplate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/authenticationController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/chatController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/generalController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/messageController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/userProfileController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/AddStoreToBlock/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/HTTP/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/Route/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/Router/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/Store/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/WebSocket/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mock-data/avatar.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mock-data/messages.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mock-data/profile.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/helper.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.parcel-cache/data.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/data.mdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.parcel-cache/lock.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/lock.mdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/Block/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Block/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/EventBus/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/EventBus/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +113,7 @@
       <workItem from="1683026960591" duration="3743000" />
       <workItem from="1683039794651" duration="4342000" />
       <workItem from="1683128004684" duration="4940000" />
-      <workItem from="1685477682285" duration="1485000" />
+      <workItem from="1685477682285" duration="2695000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1678198627227</created>
@@ -208,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685478118873</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update">
+      <created>1685479234367</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685479234367</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
