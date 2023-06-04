@@ -14,89 +14,89 @@ class AuthenticationController extends GeneralController {
     super();
   }
 
-  signup(data: XMLHttpRequestBodyInit, inputs: PropsType) {
-    AuthenticationAPI.signup(data)
-      .then((result) => {
-        if (result.status === 200) {
-          const successResponse = JSON.parse(result.responseText).id;
+  async signup(data: XMLHttpRequestBodyInit, inputs: PropsType) {
+    try {
+      const response = await AuthenticationAPI.signup(data);
 
-          this.clearInput(inputs);
+      if (response.status === 200) {
+        const successResponse = JSON.parse(response.responseText).id;
 
-          this.redirect("/messenger", 1000);
-        } else {
-          const errorReason = JSON.parse(result.responseText).reason;
+        this.clearInput(inputs);
 
-          if (errorReason === "User already in system") {
-            this.redirect("/messenger", 1000);
-          }
-        }
-      })
-      .then(() => {
+        this.redirect("/messenger", 1000);
+
         this.getUser();
-      })
-      .catch((error) => {
-        console.log("error", error);
-      });
-  }
+      } else {
+        const errorReason = JSON.parse(response.responseText).reason;
 
-  signin(data: XMLHttpRequestBodyInit, inputs: PropsType) {
-    AuthenticationAPI.signin(data)
-      .then((result) => {
-        if (result.status === 200) {
-          this.clearInput(inputs);
-
+        if (errorReason === "User already in system") {
           this.redirect("/messenger", 1000);
-        } else {
-          const errorReason = JSON.parse(result.responseText).reason;
-
-          if (errorReason === "User already in system") {
-            this.redirect("/messenger", 1000);
-          }
         }
-      })
-      .then(() => {
+
         this.getUser();
-      })
-      .catch((error) => {
-        console.log("error", error);
-      });
+      }
+    } catch (err) {
+      console.log(err);
+    }
   }
 
-  getUser() {
-    AuthenticationAPI.user()
-      .then((data: XMLHttpRequest) => {
-        if (data.status === 200) {
-          const userData = JSON.parse(data.response);
+  async signin(data: XMLHttpRequestBodyInit, inputs: PropsType) {
+    try {
+      const response = await AuthenticationAPI.signin(data);
 
-          Store.initState();
+      if (response.status === 200) {
+        this.clearInput(inputs);
 
-          Store.setState("user", userData);
+        this.redirect("/messenger", 1000);
+        this.getUser();
+      } else {
+        const errorReason = JSON.parse(response.responseText).reason;
 
-          Store.setState("isAuth", true);
-
-          ChatController.getChats();
-        } else {
-          Store.initState();
+        if (errorReason === "User already in system") {
+          this.redirect("/messenger", 1000);
         }
-      })
-      .catch((error) => {
-        console.log("error", error);
-      });
+        this.getUser();
+      }
+    } catch (err) {
+      console.log(err);
+    }
   }
 
-  logout() {
-    AuthenticationAPI.logout()
-      .then(() => {
-        this.redirect("/", 0);
-        Router.go("/");
+  async getUser() {
+    try {
+      const response = await AuthenticationAPI.user();
 
-        MessageController.close();
+      if (response.status === 200) {
+        const userData = JSON.parse(response.response);
 
-        Store.removeState();
-      })
-      .catch((error) => {
-        console.log("error", error);
-      });
+        Store.initState();
+
+        Store.setState("user", userData);
+
+        Store.setState("isAuth", true);
+
+        ChatController.getChats();
+      } else {
+        Store.initState();
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async logout() {
+    try {
+      const response = await AuthenticationAPI.logout();
+
+      this.redirect("/", 0);
+      Router.go("/");
+
+      MessageController.close();
+
+      Store.removeState();
+    } catch (err) {
+      console.log(err);
+    }
   }
 }
 
