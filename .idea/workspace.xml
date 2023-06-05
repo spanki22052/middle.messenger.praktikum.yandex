@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0698993c-088d-4b8a-b2c9-cbaf11d643be" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/0e613961dce44a82" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/0e613961dce44a82" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/13776de4870b0ae4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/13776de4870b0ae4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/1d11806abf58443d" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/1d11806abf58443d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/35c20fb91e350b46" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/35c20fb91e350b46" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/37dbec41244c32ee.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/37dbec41244c32ee.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/3b15f003e4aada7f" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/3b15f003e4aada7f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/7c901be8e1fcacd1" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/7c901be8e1fcacd1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/839725f60ad82a5f" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/839725f60ad82a5f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/a9f5484dda8bfe2c" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/a9f5484dda8bfe2c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.parcel-cache/data.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/.parcel-cache/data.mdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +12,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="sprint_1" />
+        <entry key="$PROJECT_DIR$" value="revert-4-sprint_3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,7 +35,7 @@
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\m.makiev\\AppData\\Roaming\\npm\\node_modules\\prettier",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
-    "ts.external.directory.path": "C:\\Git\\middle.messenger.praktikum.yandex1\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\toCopy\\midd\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>

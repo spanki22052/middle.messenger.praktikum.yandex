@@ -6,7 +6,7 @@ export default function renderDOM(block: Block, query: string) {
   const blockContent = block.getContent();
 
   if (rootElement && blockContent) {
-    rootElement.appendChild(blockContent);
+    rootElement.replaceChildren(blockContent);
 
     block.dispatchComponentDidMount();
   }

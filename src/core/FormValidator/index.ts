@@ -26,7 +26,7 @@ export default class FormValidator {
   static regularExpresssions = {
     login: /^(?!\d+$)[A-Za-z-_0-9]{3,20}$/,
     email: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
-    password: /^(?=[^A-Z]*[A-Z])(?=\D*\d)[A-Za-z0-9!#%]{8,40}$/,
+    password: /^(?=[^A-Z]*[A-Z])(?=\D*\d)[A-Za-z0-9!#%^$*_, ]{8,40}$/,
     name: /^[A-ZА-ЯЁ][а-яА-ЯёЁa-zA-Z-]+$/,
     phone: /^(.+\d{10,15})$/,
     message: /.+/,
@@ -130,8 +130,11 @@ export default class FormValidator {
   static verifyElement(element: HTMLInputElement): { [key: string]: string } {
     const { name, value } = element;
 
-    const error = FormValidator.formValidationEntries[name](value);
+    if (FormValidator.formValidationEntries[name]) {
+      const error = FormValidator.formValidationEntries[name](value);
+      return { value, error };
+    }
 
-    return { value, error };
+    return { value };
   }
 }
