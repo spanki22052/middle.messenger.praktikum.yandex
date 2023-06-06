@@ -1,4 +1,5 @@
 import { EventBusArgsInterface } from "./types";
+import { PropsType } from "../../types";
 
 export default class EventBus {
   listeners: { [key: string]: Array<(args: EventBusArgsInterface) => void> };
@@ -25,7 +26,7 @@ export default class EventBus {
     delete this.listeners[event];
   }
 
-  emit(event: string, ...args: EventBusArgsInterface) {
+  emit(event: string, ...args) {
     if (!this.listeners[event]) throw new Event(`Нет такого события ${event}`);
 
     this.listeners[event].forEach((listener) => listener(args));
