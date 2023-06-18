@@ -1,10 +1,8 @@
-/shelf/
-/workspace.xml
-/httpRequests/
-/dist/
-/node_modules/
-/.parcel-cache
-/.idea
+shelf/
+workspace.xml
+httpRequests/
+dist
+.idea
 .parcel-cache
-.parcel-cache/
 package-lock.json
+node_modules
