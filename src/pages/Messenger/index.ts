@@ -12,6 +12,7 @@ import { PropsType } from "../../types";
 import { AddStoreToBlock } from "../../core/AddStoreToBlock";
 import Store from "../../core/Store";
 import ChatsComponent from "../../components/ChatsComponent";
+import DeleteUsers from "../../components/DeleteUsers";
 
 class Messenger extends Block {
   constructor() {
@@ -20,10 +21,18 @@ class Messenger extends Block {
 
     const chatList = ChatList;
     const chatSearch = new ChatSearchInput();
+
     super(
       "div",
       {},
-      { chatMessage, AddUsers, chatList, chatSearch, ChatsComponent }
+      {
+        chatMessage,
+        AddUsers,
+        DeleteUsers,
+        chatList,
+        chatSearch,
+        ChatsComponent,
+      }
     );
   }
 

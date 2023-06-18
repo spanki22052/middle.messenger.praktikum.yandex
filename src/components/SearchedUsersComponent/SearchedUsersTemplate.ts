@@ -1,6 +1,6 @@
 export default `
 
-<div class="">
+<div class="searched-users">
 
   {{#if isUsers}}
 

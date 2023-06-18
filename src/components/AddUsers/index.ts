@@ -11,6 +11,7 @@ import SearchedUsers from "../SearchedUsersComponent";
 import { PropsType } from "../../types";
 import { Input } from "../Input";
 import { Button } from "../Button";
+import ChatList from "../ChatListComponent";
 
 class AddUser extends Block {
   constructor(props: PropsType) {
@@ -55,17 +56,23 @@ class AddUser extends Block {
             if (value.length === 0) {
               UserProfileController.clearUsers(SearchedUsers);
             } else {
-              UserProfileController.searchUserByLogin(
-                JSON.stringify({ login: value }),
-                SearchedUsers
-              );
+              try {
+                const jsonString = JSON.stringify({ login: value });
+                UserProfileController.searchUserByLogin(
+                  jsonString,
+                  SearchedUsers
+                );
+              } catch (error) {
+                console.error(error);
+              }
             }
           }
         },
         submit: (event: Event) => {
           event.preventDefault();
-
           const chatId = Store.getState().activeChat?.id;
+
+          document.querySelector(".chat-searchbar").setAttribute("value", "");
 
           const selectedUserId = SearchedUsers.props.selectedUsers.map(
             (select: PropsType) => select.id
@@ -77,6 +84,7 @@ class AddUser extends Block {
           });
 
           ChatController.addUsersToChat(request);
+          UserProfileController.searchUserByLogin("clear", SearchedUsers);
         },
       }
     );

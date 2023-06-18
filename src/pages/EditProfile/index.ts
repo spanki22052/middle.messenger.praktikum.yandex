@@ -99,6 +99,8 @@ class EditProfile extends Block {
 
           const validateInputs = FormValidator.validateSubmit(form);
 
+          console.log(validateInputs);
+
           const payload: PropsType = {
             first_name: "",
             second_name: "",
@@ -110,8 +112,9 @@ class EditProfile extends Block {
           };
 
           Object.values(this.children).forEach((element) => {
-            payload[element.props.name] = String(element.props.value);
+            payload[element.props.name] = String(element.props.value || "");
           });
+          console.log(payload);
 
           if (validateInputs) {
             UserProfileController.editProfile(JSON.stringify(payload));

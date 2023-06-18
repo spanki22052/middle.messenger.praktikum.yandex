@@ -146,9 +146,12 @@ class ChatController extends GeneralController {
           AddUsers.setProps({
             openedPop: false,
           });
+
+          alert("Пользователи успешно добавлены в чат.");
         } else {
           const error = JSON.parse(result.responseText).reason;
           console.log(error);
+          alert("Вы не выбрали чат.");
         }
       })
       .catch((error) => {
@@ -179,6 +182,7 @@ class ChatController extends GeneralController {
 
             this.getChats();
             Store.setState("activeChat", null);
+            alert("Участники успешно удалены");
           }
         } else {
           const error = JSON.parse(result.responseText).reason;

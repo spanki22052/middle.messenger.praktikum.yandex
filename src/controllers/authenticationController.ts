@@ -19,13 +19,11 @@ class AuthenticationController extends GeneralController {
       const response = await AuthenticationAPI.signup(data);
 
       if (response.status === 200) {
-        const successResponse = JSON.parse(response.responseText).id;
-
         this.clearInput(inputs);
 
         this.redirect("/messenger", 1000);
 
-        this.getUser();
+        await this.getUser();
       } else {
         const errorReason = JSON.parse(response.responseText).reason;
 
@@ -33,7 +31,7 @@ class AuthenticationController extends GeneralController {
           this.redirect("/messenger", 1000);
         }
 
-        this.getUser();
+        await this.getUser();
       }
     } catch (err) {
       console.log(err);
@@ -48,14 +46,14 @@ class AuthenticationController extends GeneralController {
         this.clearInput(inputs);
 
         this.redirect("/messenger", 1000);
-        this.getUser();
+        await this.getUser();
       } else {
         const errorReason = JSON.parse(response.responseText).reason;
 
         if (errorReason === "User already in system") {
           this.redirect("/messenger", 1000);
         }
-        this.getUser();
+        await this.getUser();
       }
     } catch (err) {
       console.log(err);
@@ -69,15 +67,11 @@ class AuthenticationController extends GeneralController {
       if (response.status === 200) {
         const userData = JSON.parse(response.response);
 
-        Store.initState();
-
         Store.setState("user", userData);
 
         Store.setState("isAuth", true);
 
         ChatController.getChats();
-      } else {
-        Store.initState();
       }
     } catch (err) {
       console.log(err);

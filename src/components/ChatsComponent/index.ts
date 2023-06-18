@@ -16,7 +16,7 @@ import ChatController from "../../controllers/chatController";
 import AddUsers from "../AddUsers";
 import SearchedUsers from "../SearchedUsersComponent";
 import DeleteUsers from "../DeleteUsers";
-import { messages } from "../../mock-data/messages";
+
 class ChatsComponent extends Block {
   constructor(props: PropsType) {
     const defaultPicture = userPicture;
@@ -97,9 +97,7 @@ class ChatsComponent extends Block {
 }
 
 function addStateToProps(state: StateInterface) {
-  const { activeChat } = state;
-
-  const { chosenUser } = state;
+  const { activeChat, chosenUser } = state;
 
   if (chosenUser) {
     return {

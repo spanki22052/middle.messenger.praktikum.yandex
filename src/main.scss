@@ -11,6 +11,10 @@ $error: #f00;
   font-family: Inter, sans-serif;
   padding: 0;
   margin: 0;
+
+  button {
+    cursor: pointer;
+  }
 }
 
 
@@ -135,6 +139,10 @@ body {
   flex-flow: row nowrap;
 }
 
+.searched-users {
+  height : 150px;
+  overflow-y: scroll;
+}
 
 .chats-container {
   height: 100vh;
@@ -147,17 +155,26 @@ body {
   gap: 12px;
   flex: 1;
 
-  .chat-search-container {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
+  .chat-search-container, .add-user-container {
+    display: none;
     gap: 5px;
     width: 100%;
     box-sizing: border-box;
     padding: 15px;
 
+
+
+    &.opened {
+      display: block;
+    }
+
     form {
       width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 15px;
     }
 
     .custom-search-button {

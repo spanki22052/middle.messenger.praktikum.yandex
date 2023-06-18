@@ -4,9 +4,10 @@ export default `
     <a class="profile-link" href="/profile">Профиль &gt;</a>
     {{{chatSearch}}}
     {{{chatList}}}
-    {{{DeleteUsers}}}
     
       {{{chatBlock}}}
+    
+    {{{DeleteUsers}}}
     {{{AddUsers}}}
 
   </div>

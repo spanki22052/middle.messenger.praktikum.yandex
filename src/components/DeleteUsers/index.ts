@@ -10,18 +10,17 @@ class DeleteUsers extends Block {
   constructor(props: PropsType) {
     const button = new Button({
       type: "submit",
-      name: "Delete User",
+      name: "Удалить участников",
+      className: "custom-button",
     });
 
     super(
       "div",
       {
         ...props,
-        button,
         openedPop: false,
-        SearchedUsers,
       },
-      {},
+      { button, SearchedUsers },
       {
         click: (event: Event) => {
           if ((event.target! as Element).classList.contains("opened")) {

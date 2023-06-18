@@ -13,6 +13,7 @@ class UserProfileController {
   editProfile(data: XMLHttpRequestBodyInit) {
     UserProfileAPI.changeProfile(data)
       .then((result) => {
+        console.log("posted");
         if (result.status === 200) {
           Store.setState("user", JSON.parse(result.response));
         }
@@ -73,6 +74,17 @@ class UserProfileController {
   }
 
   searchUserByLogin(data: string, Component?: Block) {
+    if (Component && data === "clear") {
+      Component.setProps({
+        isUsers: true,
+        users: [],
+        selectedUsers: [],
+      });
+
+      console.log(Component._meta);
+      return;
+    }
+
     UserProfileAPI.searchUserByLogin(data)
       .then((result) => {
         if (result.status === 200) {
