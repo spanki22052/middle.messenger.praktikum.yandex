@@ -6,7 +6,7 @@ export default `
             <span class="error-message">{{error}}</span>
 
         <div class="messages__form-button">
-          <button class="login-form-button send-button" type="submit">send</button>
+          <button class="login-form-button send-button" type="submit">Отправить</button>
         </div>
       </form>
 `;

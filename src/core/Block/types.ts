@@ -20,6 +20,7 @@ export interface RenderElementProps {
 export interface MetaPropsInterface {
   text?: string;
   className?: string;
+  openedPop?: boolean;
   activeChat?: ActiveChat;
   messages: Message[];
   name?: string;

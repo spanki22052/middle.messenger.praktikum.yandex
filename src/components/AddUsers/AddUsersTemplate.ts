@@ -1,5 +1,6 @@
 export default `
-<div class="chat-search-container to-center {{#if openedPop}} opened{{/if}}">
+<div class="chat-search-container to-center  ">
+            {{#if openedPop}}
             <form>
             <p>Добавить пользователя в чат </p>
             {{{ searchInput }}}
@@ -8,7 +9,7 @@ export default `
             </div>
             {{{button}}}
             </form>
-   
+   {{/if}}
 
 </div>
 

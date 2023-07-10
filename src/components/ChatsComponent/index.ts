@@ -8,7 +8,6 @@ import SendMessage from "../SendMessage";
 import NoSelectedChat from "../NoSelectedChatComponent";
 import { PropsType, Message, StateInterface } from "../../types";
 import { BASE_URL_RESOUCES } from "../../core/HTTP";
-import SelectChat from "../SelectChat";
 import { AddStoreToBlock } from "../../core/AddStoreToBlock";
 import MessageComponent from "../Message";
 import { convertDate } from "../../utils/helper";
@@ -16,6 +15,7 @@ import ChatController from "../../controllers/chatController";
 import AddUsers from "../AddUsers";
 import SearchedUsers from "../SearchedUsersComponent";
 import DeleteUsers from "../DeleteUsers";
+import avatar from "../../assets/images/avatar.avif";
 
 class ChatsComponent extends Block {
   constructor(props: PropsType) {
@@ -33,6 +33,7 @@ class ChatsComponent extends Block {
         activeChat: props.activeChat,
         chosenUser: props.chosenUser,
         messages: props?.messages,
+        avatar: avatar,
       },
       {
         noSelectedChat,
@@ -69,9 +70,10 @@ class ChatsComponent extends Block {
             });
 
             AddUsers.setProps({
-              openedPop: true,
+              openedPop: !this.props.openedPop,
             });
           }
+
           if (
             (event.target as Element).classList.contains(
               "messages__display-content"
@@ -97,7 +99,9 @@ class ChatsComponent extends Block {
 }
 
 function addStateToProps(state: StateInterface) {
-  const { activeChat, chosenUser } = state;
+  const { activeChat } = state;
+
+  const { chosenUser } = state;
 
   if (chosenUser) {
     return {
@@ -105,6 +109,7 @@ function addStateToProps(state: StateInterface) {
       chosenUser: state.chosenUser,
       activeChat: null,
       messages: [],
+      avatar: avatar,
     };
   }
 
@@ -114,6 +119,7 @@ function addStateToProps(state: StateInterface) {
       chosenUser: null,
       activeChat: null,
       messages: [],
+      avatar: avatar,
     };
   }
 
@@ -121,10 +127,13 @@ function addStateToProps(state: StateInterface) {
 
   const stateNewMessages = ((state.messages as any) || {})[chatId]?.flat();
 
+  console.log(activeChat);
+
   return {
     isEmptyChat: false,
     chosenUser: null,
     activeChat,
+    avatar: avatar,
     messages:
       stateNewMessages?.map((el: Message) => {
         return new MessageComponent({

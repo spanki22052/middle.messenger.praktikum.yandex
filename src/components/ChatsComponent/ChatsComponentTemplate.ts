@@ -6,7 +6,7 @@ export default `
     {{{selectChatWithUser}}}
     <div class="chat-layout">
       <div class="sender-container">
-        <div class="user-img"><img {{#if activeChat.avatar}}src="https://ya-praktikum.tech/api/v2/resources{{activeChat.avatar}}" {{else}} src={{defaultPicture}} {{/if}} alt="pi" /></div>
+        <div class="user-img"><img alt='avatar' {{#if activeChat.avatar}}src="https://ya-praktikum.tech/api/v2/resources{{activeChat.avatar}}" {{else}} src={{avatar}} {{/if}} alt="avatar" /></div>
         <p class="sender-layout">{{activeChat.title}}</p>
       </div>
       <div class="dots-button">
@@ -15,7 +15,7 @@ export default `
             <span class="dot"></span>
             <span class="dot"></span>
         </div>
-        
+                           
           <div class="messages-display-heading-dots-dropdown">
             <ul>
               <li class="delete-chat">Удалить чат</li>

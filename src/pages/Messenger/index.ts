@@ -1,10 +1,5 @@
 import Block from "../../core/Block";
 import MessengerTemplate from "./MessengerTemplate";
-import { ChatMessage } from "../../components/ChatMessage";
-import { ChatSidebarBlock } from "../../components/ChatSidebarBlock";
-import { Input } from "../../components/Input";
-import { Button } from "../../components/Button";
-import formEvents from "../../core/formEvents";
 import ChatSearchInput from "../../components/ChatSearchInput";
 import AddUsers from "../../components/AddUsers";
 import ChatList from "../../components/ChatListComponent";
@@ -17,7 +12,6 @@ import DeleteUsers from "../../components/DeleteUsers";
 class Messenger extends Block {
   constructor() {
     Store.setState("activeChat", null);
-    const chatMessage = new ChatMessage({ text: "Hello man", time: "20:30" });
 
     const chatList = ChatList;
     const chatSearch = new ChatSearchInput();
@@ -25,14 +19,7 @@ class Messenger extends Block {
     super(
       "div",
       {},
-      {
-        chatMessage,
-        AddUsers,
-        DeleteUsers,
-        chatList,
-        chatSearch,
-        ChatsComponent,
-      }
+      { AddUsers, chatList, chatSearch, ChatsComponent, DeleteUsers }
     );
   }
 

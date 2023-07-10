@@ -13,7 +13,6 @@ import avatar from "../../assets/images/avatar.avif";
 import { StateInterface } from "../../types";
 import { AddStoreToBlock } from "../../core/AddStoreToBlock";
 import Store from "../../core/Store";
-import store from "../../core/Store";
 
 type ChatListProps = { [key: string]: string };
 class ChatList extends Block {
@@ -57,12 +56,15 @@ class ChatList extends Block {
             else {
               const storeUser = Store.getState().chosenUser;
 
-              ChatController.createChat(
-                JSON.stringify({
-                  title: storeUser.displayName || storeUser.title,
-                }),
-                [storeUser.id]
-              );
+              if (storeUser)
+                ChatController.createChat(
+                  JSON.stringify({
+                    title: storeUser?.displayName
+                      ? storeUser.displayName
+                      : storeUser?.title || "Hello",
+                  }),
+                  [storeUser.id]
+                );
             }
           }
         },
@@ -78,11 +80,7 @@ class ChatList extends Block {
 function addStateToProps(state: StateInterface) {
   let isChats;
 
-  if (state.chats?.length > 0) {
-    isChats = true;
-  } else {
-    isChats = false;
-  }
+  isChats = state.chats?.length > 0;
 
   const chats = state.chats;
 

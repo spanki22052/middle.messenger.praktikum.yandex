@@ -11,7 +11,6 @@ class DeleteUsers extends Block {
     const button = new Button({
       type: "submit",
       name: "Удалить участников",
-      className: "custom-button",
     });
 
     super(
@@ -20,7 +19,10 @@ class DeleteUsers extends Block {
         ...props,
         openedPop: false,
       },
-      { button, SearchedUsers },
+      {
+        SearchedUsers,
+        button,
+      },
       {
         click: (event: Event) => {
           if ((event.target! as Element).classList.contains("opened")) {

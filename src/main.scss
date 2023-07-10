@@ -11,10 +11,6 @@ $error: #f00;
   font-family: Inter, sans-serif;
   padding: 0;
   margin: 0;
-
-  button {
-    cursor: pointer;
-  }
 }
 
 
@@ -119,10 +115,6 @@ body {
 .custom-link {
   width: 100%;
   text-align: center;
-  font-weight: 500;
-  color: $primary;
-  cursor: pointer;
-  text-decoration: none;
 
   a {
     font-weight: 500;
@@ -139,10 +131,6 @@ body {
   flex-flow: row nowrap;
 }
 
-.searched-users {
-  height : 150px;
-  overflow-y: scroll;
-}
 
 .chats-container {
   height: 100vh;
@@ -155,32 +143,27 @@ body {
   gap: 12px;
   flex: 1;
 
-  .chat-search-container, .add-user-container {
-    display: none;
+
+
+  .chat-search-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+
     gap: 5px;
     width: 100%;
     box-sizing: border-box;
-    padding: 15px;
-
-
-
-    &.opened {
-      display: block;
-    }
 
     form {
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 15px;
     }
 
     .custom-search-button {
+
       background: $primary;
       border: 0;
       padding: 2px 10px;
+
       border-radius: 5px;
       color: white;
       transition: background 0.2s;
@@ -226,6 +209,9 @@ body {
 
   .chat-blocks {
     width: 100%;
+    height: 80vh !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
     margin: 0 auto;
     display: flex;
     flex-flow: column nowrap;
@@ -355,17 +341,25 @@ body {
 
       .messages-display-heading-dots-dropdown {
         display: none;
+
         position: absolute;
-        background: white;
-        box-shadow: 0 2px 6px rgba(0 0 0 / 15%);
-        right: 80%;
-        padding: 20px;
+        background: white;box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        right: 20%;
+        top: 100%;
 
         ul {
           list-style-type: none;
-
           li {
+            background: white;
+
+            padding: 10px;
+
             white-space: nowrap;
+
+            &:hover {
+              background: $primary-hovered;
+              color: white;
+            }
           }
         }
       }
@@ -789,6 +783,14 @@ body {
   flex: 0 !important;
 }
 
+
+.custom-link {
+  font-weight: 500;
+  color: $primary;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .chat-user-image {
   width: 50px;
   height: 50px;
@@ -816,4 +818,14 @@ body {
     flex-direction: column;
     justify-content: center;
   }
+}
+
+.to-center-button {
+
+  display: flex;
+  width: 100%;
+
+  justify-content: center;
+  align-items: center;
+
 }

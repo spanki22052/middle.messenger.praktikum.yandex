@@ -3,12 +3,12 @@ export default `
   <div class="chats-container">
     <a class="profile-link" href="/profile">Профиль &gt;</a>
     {{{chatSearch}}}
+    {{{AddUsers}}}
+    {{{DeleteUsers}}}
+
     {{{chatList}}}
     
-      {{{chatBlock}}}
-    
-    {{{DeleteUsers}}}
-    {{{AddUsers}}}
+    {{{chatBlock}}}
 
   </div>
     {{{ChatsComponent}}}
