@@ -115,6 +115,10 @@ body {
 .custom-link {
   width: 100%;
   text-align: center;
+  font-weight: 500;
+  color: $primary;
+  cursor: pointer;
+  text-decoration: none;
 
   a {
     font-weight: 500;
@@ -339,7 +343,7 @@ body {
         display: none;
 
         position: absolute;
-        background: #ffffff;
+        background: #fff;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 15%);
         right: 20%;
         top: 100%;
@@ -782,12 +786,6 @@ body {
 }
 
 
-.custom-link {
-  font-weight: 500;
-  color: $primary;
-  cursor: pointer;
-  text-decoration: none;
-}
 
 .chat-user-image {
   width: 50px;
