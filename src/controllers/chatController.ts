@@ -171,7 +171,7 @@ class ChatController extends GeneralController {
             openedPop: false,
           });
 
-          if (SearchedUsers.props.users.length === 0) {
+          if (SearchedUsers?.props?.users?.length === 0) {
             ChatsComponent.setProps({
               isEmptyChat: true,
             });
@@ -201,6 +201,8 @@ class ChatController extends GeneralController {
       .then((result) => {
         if (result.status === 200) {
           const users = JSON.parse(result.response);
+
+          console.log(result);
 
           SearchedUsers.setProps({
             isUsers: true,

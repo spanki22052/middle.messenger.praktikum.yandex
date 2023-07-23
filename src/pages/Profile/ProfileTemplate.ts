@@ -11,7 +11,7 @@ export default `
     <div class="profile-pic-box">
       <img src="{{avatar}}" alt="профиль">
     </div>
-    <div class="profile-name">Иван</div>
+    <div class="profile-name">{{first_name}}</div>
     <div class="user-info-box">
       <div class="item">
         <label>Почта</label>

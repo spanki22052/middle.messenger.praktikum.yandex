@@ -11,6 +11,7 @@ import EditablePicture from "../../components/EditablePicture";
 import { BASE_URL_RESOUCES } from "../../core/HTTP";
 import ExitButton from "../../components/ExitButtonComponent";
 import { Link } from "../../components/Link";
+import { AddStoreToBlock } from "../../core/AddStoreToBlock";
 
 class EditProfile extends Block {
   constructor(props: PropsType) {
@@ -129,4 +130,29 @@ class EditProfile extends Block {
   }
 }
 
-export default EditProfile;
+function addStateToProps(state: PropsType) {
+  const { user } = state;
+  if (user) {
+    return {
+      login: user.login,
+      email: user.email,
+      first_name: user.first_name,
+      second_name: user.second_name,
+      display_name: `${user.first_name} ${user.second_name} `,
+      phone: user.phone,
+      avatar: user.avatar ? user.avatar : avatar,
+    };
+  } else {
+    return {
+      login: null,
+      email: null,
+      first_name: null,
+      second_name: null,
+      display_name: null,
+      phone: null,
+      avatar: null,
+    };
+  }
+}
+
+export default AddStoreToBlock(EditProfile, addStateToProps);

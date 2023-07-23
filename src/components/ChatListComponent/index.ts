@@ -13,6 +13,7 @@ import avatar from "../../assets/images/avatar.avif";
 import { StateInterface } from "../../types";
 import { AddStoreToBlock } from "../../core/AddStoreToBlock";
 import Store from "../../core/Store";
+import DeleteUsers from "../DeleteUsers";
 
 type ChatListProps = { [key: string]: string };
 class ChatList extends Block {
@@ -34,6 +35,10 @@ class ChatList extends Block {
           const clickedUserInfo = clickedUser.closest(
             ".chat-search-user"
           ) as HTMLElement;
+
+          DeleteUsers.setProps({
+            openedPop: false,
+          });
 
           if (clickedUserInfo && clickedUserInfo.dataset) {
             const id = clickedUserInfo.dataset.userId as string;
@@ -78,9 +83,7 @@ class ChatList extends Block {
 }
 
 function addStateToProps(state: StateInterface) {
-  let isChats;
-
-  isChats = state.chats?.length > 0;
+  const isChats = state.chats?.length > 0;
 
   const chats = state.chats;
 

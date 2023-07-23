@@ -5,7 +5,7 @@ import { Button } from "../Button";
 import { PropsType } from "../../types";
 
 export default class ChatSearchInput extends Block {
-  constructor(props: PropsType) {
+  constructor(props?: PropsType) {
     const searchButton = new Button({
       text: "Найти",
       className: "custom-search-button",

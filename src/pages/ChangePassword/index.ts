@@ -7,6 +7,8 @@ import avatar from "../../assets/images/avatar.avif";
 import { PropsType } from "../../types";
 import FormValidator from "../../core/FormValidator";
 import UserProfileController from "../../controllers/userProfileController";
+import { AddStoreToBlock } from "../../core/AddStoreToBlock";
+import { BASE_URL_RESOUCES } from "../../core/HTTP";
 
 class ChangePassword extends Block {
   constructor() {
@@ -72,4 +74,17 @@ class ChangePassword extends Block {
   }
 }
 
-export default ChangePassword;
+function addStateToProps(state: PropsType) {
+  const { user } = state;
+  if (user) {
+    return {
+      avatar: user.avatar ? BASE_URL_RESOUCES + user.avatar : avatar,
+    };
+  } else {
+    return {
+      avatar: null,
+    };
+  }
+}
+
+export default AddStoreToBlock(ChangePassword, addStateToProps);

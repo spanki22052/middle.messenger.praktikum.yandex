@@ -43,7 +43,6 @@ class Store extends EventBus {
   }
 
   setState(path: string, value: unknown) {
-    this.appState = this.getState();
     const updatedState = set(this.appState, path, value);
 
     localStorage.setItem("currentState", JSON.stringify(updatedState));

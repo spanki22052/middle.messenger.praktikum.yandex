@@ -6,11 +6,9 @@ import {
   MetaPropsInterface,
   RenderElementProps,
 } from "./types";
-import setStyles from "../../utils/setStyles";
 import { nanoid } from "nanoid";
 import Handlebars = require("handlebars");
 import { PropsType } from "../../types";
-import { messages } from "../../mock-data/messages";
 
 export default class Block {
   static EVENTS = EVENTS;
@@ -25,12 +23,12 @@ export default class Block {
   eventsList: EventInterface | undefined;
 
   public constructor(
-      tagName: string = "div",
-      props: MetaPropsInterface = {},
-      renderProps: RenderElementProps = {},
-      events?: EventInterface
+    tagName = "div",
+    props: MetaPropsInterface = {},
+    renderProps: RenderElementProps = {},
+    events?: EventInterface
   ) {
-    this.eventBus = new EventBus();
+    this.eventBus = () => new EventBus();
     this._meta = {
       tagName,
       props,
@@ -138,7 +136,7 @@ export default class Block {
     Object.entries(this.children).forEach(([key, value]) => {
       if (Array.isArray(value)) {
         properties[key] = value.map(
-            (child) => `<div data-id="${child?.id}"></div>`
+          (child) => `<div data-id="${child?.id}"></div>`
         );
       } else {
         properties[key] = `<div data-id="${value?.id}"></div>`;
@@ -157,7 +155,7 @@ export default class Block {
       if (!blockComp) return;
 
       const cont = createdTemplate.content.querySelector(
-          `[data-id="${blockComp?.id}"]`
+        `[data-id="${blockComp?.id}"]`
       );
 
       if (!cont) {
@@ -212,7 +210,7 @@ export default class Block {
     if (this.element?.parentNode?.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
       setTimeout(() => {
         if (
-            this.element?.parentNode?.nodeType !== Node.DOCUMENT_FRAGMENT_NODE
+          this.element?.parentNode?.nodeType !== Node.DOCUMENT_FRAGMENT_NODE
         ) {
           this.eventBus().emit(Block.EVENTS.FLOW_CDM);
         }

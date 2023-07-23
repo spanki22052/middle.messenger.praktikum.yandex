@@ -15,7 +15,6 @@ import ChatController from "../../controllers/chatController";
 import AddUsers from "../AddUsers";
 import SearchedUsers from "../SearchedUsersComponent";
 import DeleteUsers from "../DeleteUsers";
-import avatar from "../../assets/images/avatar.avif";
 
 class ChatsComponent extends Block {
   constructor(props: PropsType) {
@@ -33,7 +32,7 @@ class ChatsComponent extends Block {
         activeChat: props.activeChat,
         chosenUser: props.chosenUser,
         messages: props?.messages,
-        avatar: avatar,
+        avatar: userPicture,
       },
       {
         noSelectedChat,
@@ -109,7 +108,7 @@ function addStateToProps(state: StateInterface) {
       chosenUser: state.chosenUser,
       activeChat: null,
       messages: [],
-      avatar: avatar,
+      avatar: this.chosenUser?.avatar || userPicture,
     };
   }
 
@@ -119,7 +118,7 @@ function addStateToProps(state: StateInterface) {
       chosenUser: null,
       activeChat: null,
       messages: [],
-      avatar: avatar,
+      avatar: this.chosenUser?.avatar || userPicture,
     };
   }
 
@@ -132,8 +131,8 @@ function addStateToProps(state: StateInterface) {
   return {
     isEmptyChat: false,
     chosenUser: null,
+    avatar: this.chosenUser?.avatar || userPicture,
     activeChat,
-    avatar: avatar,
     messages:
       stateNewMessages?.map((el: Message) => {
         return new MessageComponent({

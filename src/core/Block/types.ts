@@ -22,11 +22,12 @@ export interface MetaPropsInterface {
   className?: string;
   openedPop?: boolean;
   activeChat?: ActiveChat;
-  messages: Message[];
+  messages?: Message[];
   name?: string;
   styles?: StylesType;
   amount?: number;
   type?: string;
+  isEmptyChat?: boolean;
   href?: string;
   chosenUser?: User;
   user?: User;
@@ -42,8 +43,10 @@ export interface MetaPropsInterface {
   id?: number | string;
   label?: string;
   placeholder?: string;
-  users: any[];
-  selectedUsers: any[];
+  users?: any[];
+  selectedUsers?: any[];
+  baseUrl?: string;
+  avatar?: string;
 }
 
 export interface EventInterface {

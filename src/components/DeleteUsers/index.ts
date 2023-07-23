@@ -33,11 +33,11 @@ class DeleteUsers extends Block {
         submit: (event: Event) => {
           event.preventDefault();
 
-          const userIds = SearchedUsers.props.selectedUsers.map(
+          const userIds = SearchedUsers.props.selectedUsers?.map(
             (user: PropsType) => user.id
           );
 
-          ChatController.deleteUsersFromChat(userIds);
+          if (userIds) ChatController.deleteUsersFromChat(userIds);
         },
       }
     );
