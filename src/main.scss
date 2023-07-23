@@ -115,6 +115,10 @@ body {
 .custom-link {
   width: 100%;
   text-align: center;
+  font-weight: 500;
+  color: $primary;
+  cursor: pointer;
+  text-decoration: none;
 
   a {
     font-weight: 500;
@@ -134,14 +138,41 @@ body {
 
 .chats-container {
   height: 100vh;
-  max-width: 310px;
-  min-width: 190px;
   background: #fbfbfb;
+  max-width: 350px;
+  padding: 0 10px;
   border-right: 1px solid #eaeaea;
   display: flex;
   flex-direction: column;
   gap: 12px;
   flex: 1;
+
+  .chat-search-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    box-sizing: border-box;
+
+    form {
+      width: 100%;
+    }
+
+    .custom-search-button {
+      background: $primary;
+      border: 0;
+      padding: 2px 10px;
+      border-radius: 5px;
+      color: white;
+      transition: background 0.2s;
+
+      &:hover {
+        background: $primary-hovered;
+        transition: background 0.2s;
+      }
+    }
+  }
 
   .chat-searchbar {
     width: 90%;
@@ -176,6 +207,9 @@ body {
 
   .chat-blocks {
     width: 100%;
+    height: 80vh !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
     margin: 0 auto;
     display: flex;
     flex-flow: column nowrap;
@@ -221,6 +255,7 @@ body {
         .upside {
           width: 100%;
           display: flex;
+          align-items: center;
           justify-content: space-between;
           margin-bottom: 4px;
 
@@ -281,20 +316,55 @@ body {
       background-color: transparent;
       border: none;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 30px;
-      height: 30px;
-      transform: rotate(90deg);
-      transition: transform 0.3s ease-in-out;
+      position: relative;
 
-      .dot {
-        width: 4px;
-        height: 4px;
-        background-color: #333;
-        border-radius: 50%;
-        margin: 2px;
+      .dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        transform: rotate(90deg);
+        transition: transform 0.3s ease-in-out;
+
+
+        .dot {
+          width: 4px;
+          height: 4px;
+          background-color: #333;
+          border-radius: 50%;
+          margin: 2px;
+        }
+      }
+
+      .messages-display-heading-dots-dropdown {
+        display: none;
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0 0 0 / 15%);
+        right: 20%;
+        top: 100%;
+
+        ul {
+          list-style-type: none;
+
+          li {
+            background: white;
+            padding: 10px;
+            white-space: nowrap;
+
+            &:hover {
+              background: $primary-hovered;
+              color: white;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .messages-display-heading-dots-dropdown {
+          display: block;
+        }
       }
     }
 
@@ -402,8 +472,8 @@ body {
   border-radius: 100%;
   color: white;
   position: absolute;
-  bottom: 2px;
-  right: 0;
+  bottom: -5px;
+  right: -5px;
 }
 
 .user-img {
@@ -411,6 +481,12 @@ body {
   height: 45px;
   background-color: $light-gray;
   border-radius: 100%;
+
+  img {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+  }
 }
 
 .centered-time {
@@ -512,19 +588,19 @@ body {
         .input-container-ui {
           max-width: 250px;
 
-            .error-message {
-              color: red;
-            }
+          .error-message {
+            color: red;
+          }
 
-            input {
-              border: 0;
-              border-bottom: 1px solid $dark-gray;
-              height: 30px;
+          input {
+            border: 0;
+            border-bottom: 1px solid $dark-gray;
+            height: 30px;
 
-              &:focus {
-                outline: none;
-              }
+            &:focus {
+              outline: none;
             }
+          }
         }
 
         &:not(:last-child) {
@@ -573,35 +649,13 @@ body {
       font-size: 18px;
     }
 
-    .editable {
-      &::after {
-        content: 'Поменять \Aаватар';
-        white-space: pre;
-        width: 100%;
-        height: 100%;
-        border-radius: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 0;
-        left: 0;
-        font-size: 14px;
-        color: #fff;
-        opacity: 0;
-        transition: all .3s ease-in-out;
-        text-align:center;
-        position: absolute;
-      }
-
-      &:hover::after {
-        opacity: .8;
-        background-color:#00000080;
-      }
+    .profile-pic-box, img {
+      width: 130px;
+      height: 130px;
+      border-radius: 100%;
     }
 
     .profile-pic-box {
-      width: 130px;
-      height: 130px;
       border: 0;
       display: flex;
       justify-content: center;
@@ -673,4 +727,93 @@ body {
     color: #3369f3;
     text-decoration: none;
   }
+}
+
+.file-upload {
+  position: relative;
+
+  &::after {
+    content: 'Поменять \Aаватар';
+    white-space: pre;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    text-align: center;
+    position: absolute;
+  }
+
+  &:hover::after {
+    opacity: .8;
+    background-color: #00000080;
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.login-form-button {
+  padding: 4px 10px;
+  border: 0;
+  background: $primary;
+  border-radius: 10px;
+  color: white;
+  transition: background 0.3s;
+
+  &:hover {
+    background: $primary-hovered;
+    transition: background 0.3s;
+  }
+}
+
+.profile-small {
+  height: 200px;
+  flex: 0 !important;
+}
+
+
+
+.chat-user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+#chat-user-selected, .chat-user {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.chat-search-user {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.to-center {
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.to-center-button {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }

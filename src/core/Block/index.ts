@@ -6,15 +6,15 @@ import {
   MetaPropsInterface,
   RenderElementProps,
 } from "./types";
-import setStyles from "../../utils/setStyles";
 import { nanoid } from "nanoid";
 import Handlebars = require("handlebars");
+import { PropsType } from "../../types";
 
 export default class Block {
   static EVENTS = EVENTS;
 
   id = nanoid(6);
-  eventBus;
+  eventBus: () => EventBus;
   _meta: MetaInterface;
   element: HTMLElement;
   props: MetaPropsInterface;
@@ -22,64 +22,73 @@ export default class Block {
   children: RenderElementProps;
   eventsList: EventInterface | undefined;
 
-  constructor(
-    tagName: string = "div",
+  public constructor(
+    tagName = "div",
     props: MetaPropsInterface = {},
     renderProps: RenderElementProps = {},
     events?: EventInterface
   ) {
-    this.eventBus = new EventBus();
+    this.eventBus = () => new EventBus();
     this._meta = {
       tagName,
       props,
     };
     this.children = renderProps;
+
     this.eventsList = events;
-    this._registerEvents();
-    this.eventBus.emit(Block.EVENTS.INIT);
+    const eventBus = new EventBus();
+    this._registerEvents(eventBus);
+    this.eventBus = () => eventBus;
+    eventBus.emit(Block.EVENTS.INIT);
     this.props = this._makePropsProxy(props);
   }
 
   dispatchComponentDidMount() {
-    this.eventBus.emit(Block.EVENTS.FLOW_CDM);
+    this.eventBus().emit(Block.EVENTS.FLOW_CDM);
   }
 
-  _registerEvents() {
-    this.eventBus.on(Block.EVENTS.INIT, this.init.bind(this));
-    this.eventBus.on(Block.EVENTS.FLOW_CDM, this._componentDidMount.bind(this));
-    this.eventBus.on(Block.EVENTS.FLOW_RENDER, this._render.bind(this));
-    this.eventBus.on(Block.EVENTS.FLOW_CDU, this.componentDidUpdate.bind(this));
+  _registerEvents(eventBus: EventBus) {
+    eventBus.on(Block.EVENTS.INIT, this.init.bind(this));
+    eventBus.on(Block.EVENTS.FLOW_CDM, this._componentDidMount.bind(this));
+    eventBus.on(Block.EVENTS.FLOW_RENDER, this._render.bind(this));
+    eventBus.on(Block.EVENTS.FLOW_CDU, this._componentDidUpdate.bind(this));
   }
 
   _createResources() {
     this.element = document.createElement(this._meta.tagName);
   }
 
-  init() {
+  init(eventBus: EventBus) {
     this._createResources();
-    this.eventBus.emit(Block.EVENTS.FLOW_RENDER);
+    this.eventBus().emit(Block.EVENTS.FLOW_RENDER, this.props);
   }
+  _componentDidUpdate(oldProps: PropsType, newProps: PropsType) {
+    const response = this.componentDidUpdate(oldProps, newProps);
 
-  componentDidUpdate() {
-    if (!this._updating) {
-      this._updating = true;
-      this.eventBus.emit(Block.EVENTS.FLOW_CDU);
-
-      this._updating = false;
+    if (this.props?.messages && this.props.messages.length > 0) {
+      this.children = {
+        ...this.children,
+        messageComponents: this.props.messages.flat(),
+      };
     }
+
+    if (!response) {
+      return;
+    }
+    this._render();
   }
 
-  setProps(el: MetaPropsInterface) {
-    this.props = { ...this.props, ...el };
-    if (Object.keys(el).includes("className"))
-      this.element.classList.add(el.className || "");
-    if (Object.keys(el).includes("styles"))
-      setStyles(this.element, el.styles || {});
-    if (Object.keys(el).includes("name")) {
-      this.element.setAttribute("name", el.name || "");
-    }
-    this.componentDidUpdate();
+  componentDidUpdate(_oldProps: PropsType, _newProps: PropsType) {
+    return true;
   }
+
+  setProps = (nextProps: PropsType) => {
+    if (!nextProps) {
+      return;
+    }
+
+    Object.assign(this.props, nextProps);
+  };
 
   _componentDidMount(props: MetaPropsInterface) {
     this.componentDidMount(props);
@@ -98,32 +107,21 @@ export default class Block {
 
   render() {}
 
-  private _makePropsProxy(props: Record<string, any>): Record<string, any> {
+  _makePropsProxy(props: PropsType): any {
+    const self = this;
+
     return new Proxy(props, {
-      set: (target, prop: string, value) => {
-        if (prop in target) {
-          const oldValue = target[prop];
-          target[prop] = value;
-
-          if (oldValue !== value) {
-            this.eventBus.emit(
-              Block.EVENTS.FLOW_CDU,
-              target,
-              prop,
-              value,
-              oldValue
-            );
-          }
-        } else {
-          throw new Error(`Не существует такого события ${prop}`);
-        }
-
+      get(target: PropsType, prop: string) {
+        const value = target[prop];
+        return typeof value === "function" ? value.bind(target) : value;
+      },
+      set(target: Record<string, unknown>, prop: string, value: unknown) {
+        target[prop] = value;
+        self.eventBus().emit(Block.EVENTS.FLOW_CDU, { ...target }, target);
         return true;
       },
-      deleteProperty: () => {
-        throw new Error(
-          "Не можем удалить такое событие так как его не существует"
-        );
+      deleteProperty() {
+        throw new Error("You do not have access to this");
       },
     });
   }
@@ -132,39 +130,48 @@ export default class Block {
     return document.createElement(tagName);
   }
 
-  compile(incomingTemplate: string): DocumentFragment {
+  compile(Incomingtemplate: string): DocumentFragment {
     const properties: any = { ...this._meta.props };
+
     Object.entries(this.children).forEach(([key, value]) => {
-      properties[key] = `<div data-id="${value.id}"></div>`;
+      if (Array.isArray(value)) {
+        properties[key] = value.map(
+          (child) => `<div data-id="${child?.id}"></div>`
+        );
+      } else {
+        properties[key] = `<div data-id="${value?.id}"></div>`;
+      }
     });
     const createdTemplate = document.createElement("template");
 
-    const compiledTemplate = Handlebars.compile(incomingTemplate);
+    const compiledTemplate = Handlebars.compile(Incomingtemplate);
+
     createdTemplate.innerHTML = compiledTemplate({
-      ...this.props,
       children: this.children,
       ...properties,
     });
 
-    Object.entries(this.children).forEach(([, child]) => {
-      const selectedElement = createdTemplate.content.querySelector(
-        `[data-id="${child.id}"]`
+    const replaceCont = (blockComp: Block) => {
+      if (!blockComp) return;
+
+      const cont = createdTemplate.content.querySelector(
+        `[data-id="${blockComp?.id}"]`
       );
 
-      if (!selectedElement) {
+      if (!cont) {
         return;
       }
 
-      const selectedElementChildren = selectedElement.childNodes.length
-        ? selectedElement.childNodes
-        : [];
+      blockComp?.getContent().append(...Array.from(cont.childNodes));
 
-      const content = child.getContent();
-      selectedElement.replaceWith(content);
+      cont.replaceWith(blockComp.getContent());
+    };
 
-      const layoutContent = content?.querySelector('[data-layout="1"]');
-      if (layoutContent && selectedElementChildren.length) {
-        layoutContent.append(...Array.from(selectedElementChildren));
+    Object.entries(this.children).forEach(([, blockComp]) => {
+      if (Array.isArray(blockComp)) {
+        blockComp.forEach(replaceCont);
+      } else {
+        replaceCont(blockComp);
       }
     });
 
@@ -187,7 +194,6 @@ export default class Block {
 
   _addEvents() {
     const events = this.eventsList;
-    console.log(events);
 
     if (!events) {
       return;
@@ -206,13 +212,14 @@ export default class Block {
         if (
           this.element?.parentNode?.nodeType !== Node.DOCUMENT_FRAGMENT_NODE
         ) {
-          this.eventBus.emit(Block.EVENTS.FLOW_CDM);
+          this.eventBus().emit(Block.EVENTS.FLOW_CDM);
         }
       }, 100);
     }
 
     return this.element!;
   }
+
   show() {
     this.element.style.display = "block";
   }
