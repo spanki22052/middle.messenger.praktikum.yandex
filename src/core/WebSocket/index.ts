@@ -67,7 +67,14 @@ export default class UseWebSocket extends EventBus {
     });
 
     this.socket.addEventListener("message", (message) => {
-      const data = JSON.parse(message.data);
+      let data;
+
+      try {
+        data = JSON.parse(message.data);
+      } catch (err) {
+        console.error("Error parsing JSON:", err);
+        return;
+      }
 
       if (data.type && data.type === "pong") {
         return;
