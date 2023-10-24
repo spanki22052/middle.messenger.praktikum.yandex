@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import template from "./SelectChatComponent";
 
 import { Block } from "../../core/Block";
@@ -10,10 +11,20 @@ import ChatController from "../../controllers/chatController";
 
 import { BASE_URL_RESOUCES } from "../../core/HTTP";
 
-import { PropsType, StateInterface } from "../../types";
+import { StateInterface } from "../../types";
+import {
+  EventInterface,
+  MetaPropsInterface,
+  RenderElementProps,
+} from "../../core/Block/types";
 
 class SelectChat extends Block {
-  constructor(props: PropsType) {
+  constructor(
+    _tagName?: string,
+    props?: MetaPropsInterface,
+    _renderProps?: RenderElementProps,
+    _events?: EventInterface
+  ) {
     const startChatButton = new Button(
       {
         type: "",
@@ -37,8 +48,8 @@ class SelectChat extends Block {
       {
         ...props,
         baseUrl: BASE_URL_RESOUCES,
-        chosenUser: props.chosenUser,
-        user: props.user,
+        chosenUser: props?.chosenUser,
+        user: props?.user,
       },
       { startChatButton }
     );

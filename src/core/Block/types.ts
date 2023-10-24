@@ -23,6 +23,11 @@ export interface MetaPropsInterface {
   className?: string;
   openedPop?: boolean;
   title?: string;
+  email?: string;
+  login?: string;
+  first_name?: string;
+  second_name?: string;
+  phone?: string;
   activeChat?: ActiveChat;
   messages?: Message[];
   name?: string;

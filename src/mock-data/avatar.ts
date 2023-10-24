@@ -1,4 +1,4 @@
-import userAvatar from "../assets/images/avatar.avif";
+import userAvatar from "../assets/userAvatar";
 
 export const avatar = [
   {

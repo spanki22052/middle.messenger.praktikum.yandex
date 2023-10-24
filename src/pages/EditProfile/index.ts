@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Block } from "../../core/Block";
 import EditProfileTemplate from "./EditProfileTemplate";
 import { Input } from "../../components/Input";
@@ -11,12 +12,22 @@ import { BASE_URL_RESOUCES } from "../../core/HTTP";
 import ExitButton from "../../components/ExitButtonComponent";
 import { Link } from "../../components/Link";
 import { AddStoreToBlock } from "../../core/AddStoreToBlock";
+import {
+  EventInterface,
+  MetaPropsInterface,
+  RenderElementProps,
+} from "../../core/Block/types";
 
 class EditProfile extends Block {
-  constructor(props: PropsType) {
+  constructor(
+    _tagName?: string,
+    props?: MetaPropsInterface,
+    _renderProps?: RenderElementProps,
+    _events?: EventInterface
+  ) {
     const defaultPicture = avatar;
     const userPicture = new EditablePicture({
-      avatar: props.avatar ? props.avatar : defaultPicture,
+      avatar: props?.avatar ? props.avatar : defaultPicture,
     });
 
     const exitButton = new ExitButton({
@@ -28,7 +39,7 @@ class EditProfile extends Block {
       id: "email",
       name: "email",
       type: "email",
-      value: props.email,
+      value: props?.email,
       error: "",
     });
     const login = new Input({
@@ -36,7 +47,7 @@ class EditProfile extends Block {
       id: "login",
       name: "login",
       type: "text",
-      value: props.login,
+      value: props?.login,
       error: "",
     });
     const firstName = new Input({
@@ -44,7 +55,7 @@ class EditProfile extends Block {
       id: "firstName",
       name: "first_name",
       type: "text",
-      value: props.first_name,
+      value: props?.first_name,
       error: "",
     });
     const secondName = new Input({
@@ -52,7 +63,7 @@ class EditProfile extends Block {
       id: "secondName",
       name: "second_name",
       type: "text",
-      value: props.second_name,
+      value: props?.second_name,
       error: "",
     });
     const phone = new Input({
@@ -60,7 +71,7 @@ class EditProfile extends Block {
       id: "phone",
       name: "phone",
       type: "tel",
-      value: props.phone,
+      value: props?.phone,
       error: "",
     });
 
@@ -80,7 +91,7 @@ class EditProfile extends Block {
       "div",
       {
         ...props,
-        avatar: props.avatar ? BASE_URL_RESOUCES + props.avatar : avatar,
+        avatar: props?.avatar ? BASE_URL_RESOUCES + props.avatar : avatar,
       },
       {
         email,

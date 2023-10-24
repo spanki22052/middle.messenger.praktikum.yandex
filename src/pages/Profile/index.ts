@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import ProfileTemplate from "./ProfileTemplate";
 import { Block } from "../../core/Block";
 import { Button } from "../../components/Button";
@@ -5,9 +6,20 @@ import { PropsType } from "../../types";
 import AuthenticationController from "../../controllers/authenticationController";
 import { BASE_URL_RESOUCES } from "../../core/HTTP";
 import { AddStoreToBlock } from "../../core/AddStoreToBlock";
+import avatar from "../../assets/userAvatar";
+import {
+  EventInterface,
+  MetaPropsInterface,
+  RenderElementProps,
+} from "../../core/Block/types";
 
 class Profile extends Block {
-  constructor(props: PropsType) {
+  constructor(
+    _tagName?: string,
+    props?: MetaPropsInterface,
+    _renderProps?: RenderElementProps,
+    _events?: EventInterface
+  ) {
     console.log(props);
     const logout = new Button(
       {
@@ -28,7 +40,7 @@ class Profile extends Block {
       "div",
       {
         ...props,
-        avatar: props.avatar ? BASE_URL_RESOUCES + props.avatar : avatar,
+        avatar: props?.avatar ? BASE_URL_RESOUCES + props.avatar : avatar,
       },
       {
         logout,
