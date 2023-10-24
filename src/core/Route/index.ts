@@ -42,8 +42,6 @@ export default class Route {
   render() {
     this._block = new this._blockClass(this._props);
 
-    console.log("someChanges");
-
     renderDOM(this._block!, "root");
   }
 }
