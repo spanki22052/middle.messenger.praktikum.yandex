@@ -28,7 +28,7 @@ export default defineConfig({
     include: ["dependency-package"],
   },
   build: {
-    outDir: "dist",
+    outDir: path.resolve(__dirname, "dist"),
     rollupOptions: {
       input: {
         app: "src/index.html",
