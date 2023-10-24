@@ -30,7 +30,11 @@
     "@parcel/transformer-css": "^2.8.3",
     "@parcel/transformer-sass": "^2.8.3",
     "@types/chai": "^4.3.9",
+    "@types/mocha": "^10.0.3",
+    "@types/sinon": "^10.0.20",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "@vitejs/plugin-react": "^4.1.0",
     "assert": "^2.0.0",
     "browserify-zlib": "^0.2.0",
     "buffer": "^5.7.1",
@@ -43,13 +47,10 @@
     "process": "^0.11.10",
     "vite": "^4.5.0",
     "vite-plugin-html": "^3.2.0",
-    "vite-plugin-html-template": "^0.1.0"
+    "vite-plugin-html-template": "^0.1.0",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@types/mocha": "^10.0.3",
-    "@types/sinon": "^10.0.20",
-    "@typescript-eslint/parser": "^6.9.0",
-    "@vitejs/plugin-react": "^4.1.0",
     "chai": "^4.3.10",
     "css-loader": "^6.7.3",
     "eslint": "^8.52.0",
