@@ -1,3 +1,4 @@
+import { avatar } from "./../../assets/avatar";
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { Block } from "../../core/Block";
@@ -144,7 +145,10 @@ function addStateToProps(state: StateInterface) {
   return {
     isEmptyChat: false,
     chosenUser: null,
-    avatar: this.chosenUser?.avatar || userPicture,
+    avatar:
+      this.chosenUser && this.chosenUser.avatar
+        ? this.chosenUser.avatar
+        : userPicture,
     activeChat,
     messages:
       stateNewMessages?.map((el: Message) => {
