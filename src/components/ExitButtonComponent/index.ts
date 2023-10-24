@@ -14,6 +14,7 @@ export default class ExitButton extends Block {
         click: (event: Event) => {
           event.preventDefault();
           Router.go(props.path);
+
           ChatController.leaveChatPage();
         },
       }
