@@ -40,7 +40,10 @@
     "mini-css-extract-plugin": "^2.7.6",
     "mocha": "^10.2.0",
     "path-browserify": "^1.0.1",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "vite": "^4.5.0",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-html-template": "^0.1.0"
   },
   "dependencies": {
     "@types/mocha": "^10.0.3",
@@ -59,8 +62,6 @@
     "stylelint": "^15.11.0",
     "stylelint-config-standard-scss": "7.0.1",
     "stylelint-scss": "4.4.0",
-    "ts-node": "^10.9.1",
-    "vite-plugin-html": "^3.2.0",
-    "vite-plugin-html-template": "^0.1.0"
+    "ts-node": "^10.9.1"
   }
 }
