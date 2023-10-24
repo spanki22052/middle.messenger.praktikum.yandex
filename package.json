@@ -16,14 +16,13 @@
     "build": "npx -p parcel-bundler parcel build static/index.html",
     "stylelint": "stylelint **/*.scss --fix",
     "precommit": "lint-staged",
-    "lint": "eslint src/**/*.js"
+    "eslint:fix": "lint-staged \"**/*.{ts,js,jsx,tsx}\"",
+    "lint": "npm run eslint:fix && npm run stylelint"
   },
   "husky": {
     "hooks": {
-      "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
-      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
-      "post-applypatch": "echo \"[Husky] post-applypatch\"",
-      "pre-commit": "npm test"
+      "pre-commit": "npm run test",
+      "pre-push": "npm run lint"
     }
   },
   "lint-staged": {
