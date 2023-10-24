@@ -47,22 +47,22 @@
     "process": "^0.11.10",
     "vite": "^4.5.0",
     "vite-plugin-html": "^3.2.0",
+    "eslint": "^8.52.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard-scss": "7.0.1",
+    "stylelint-scss": "4.4.0",
+    "ts-node": "^10.9.1",
+    "eslint-plugin-import": "^2.27.5",
     "vite-plugin-html-template": "^0.1.0",
+    "css-loader": "^6.7.3",
     "typescript": "^5.2.2"
   },
   "dependencies": {
     "chai": "^4.3.10",
-    "css-loader": "^6.7.3",
-    "eslint": "^8.52.0",
-    "eslint-plugin-import": "^2.27.5",
     "express": "4.18.2",
     "handlebars": "^4.7.8",
     "jsdom": "^22.1.0",
     "nanoid": "3",
-    "sinon": "^17.0.0",
-    "stylelint": "^15.11.0",
-    "stylelint-config-standard-scss": "7.0.1",
-    "stylelint-scss": "4.4.0",
-    "ts-node": "^10.9.1"
+    "sinon": "^17.0.0"
   }
 }
