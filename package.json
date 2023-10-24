@@ -20,12 +20,6 @@
     "lint": "npm run eslint:fix && npm run stylelint",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test && npm run lint",
-      "pre-push": "npm run lint"
-    }
-  },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
       "npm run lint",
