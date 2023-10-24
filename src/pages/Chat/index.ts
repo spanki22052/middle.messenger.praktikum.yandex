@@ -1,5 +1,5 @@
 import ChatTemplate from "./ChatTemplate";
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import { ChatMessage } from "../../components/ChatMessage";
 import { ChatSidebarBlock } from "../../components/ChatSidebarBlock";
 import { Input } from "../../components/Input";

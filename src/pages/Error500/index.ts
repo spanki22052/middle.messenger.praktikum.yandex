@@ -1,4 +1,4 @@
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import Error500Template from "./Error500Template";
 
 class Error500 extends Block {

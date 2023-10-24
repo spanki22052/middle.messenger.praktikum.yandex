@@ -1,4 +1,4 @@
-import Block from "../Block";
+import { Block } from "../Block";
 
 export interface FormEventsInterface {
   submit: (event: Event, state: { [key: string]: string }) => void;

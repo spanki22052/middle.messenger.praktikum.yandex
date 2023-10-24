@@ -1,4 +1,6 @@
-import Block from "../../core/Block";
+/* eslint-disable @typescript-eslint/no-use-before-define */
+/* eslint-disable @typescript-eslint/no-this-alias */
+import { Block } from "../../core/Block";
 import { MetaPropsInterface } from "../../core/Block/types";
 import formEvents from "../../core/formEvents";
 import InputTemplate from "./InputTemplate";

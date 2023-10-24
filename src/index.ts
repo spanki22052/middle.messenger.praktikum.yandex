@@ -1,37 +1,38 @@
-import Index from "./pages/Login";
-import Block from "./core/Block";
-import renderDOM from "./core/renderDom";
 import Register from "./pages/Register";
-import Chat from "./pages/Chat";
 import Profile from "./pages/Profile";
 import ChangePassword from "./pages/ChangePassword";
 import EditProfile from "./pages/EditProfile";
 import Messenger from "./pages/Messenger";
 import Error500 from "./pages/Error500";
 import Error404 from "./pages/Error404";
+import authenticationController from "./controllers/authenticationController";
+import Login from "./pages/Login";
+import Router from "./core/Router";
 
-const login = new Index();
-const register = new Register();
-const chat = new Chat();
-const profile = new Profile();
-const changePassword = new ChangePassword();
-const editProfile = new EditProfile();
-const messenger = new Messenger();
-const error404 = new Error404();
-const error500 = new Error500();
-
-const pageRoutes: { [key: string]: Block } = {
-  "/": login,
-  "/register": register,
-  "/chat": chat,
-  "/profile": profile,
-  "/profile/change-password": changePassword,
-  "/profile/edit": editProfile,
-  "/messenger": messenger,
-  "/404": error404,
-  "/500": error500,
+const Routes = {
+  Login: "/",
+  Registration: "/sign-up",
+  Profile: "/profile",
+  EditProfile: "/profile/edit",
+  Chat: "/messenger",
+  Server: "/server-error",
+  Password: "/settings/password",
+  NotFound: "?",
 };
 
-const location = pageRoutes[window.location.pathname] || error404;
+window.addEventListener("DOMContentLoaded", () => {
+  authenticationController.getUser();
 
-renderDOM(location, "root");
+  Router.use(Routes.Login, Login, { isPrivateRoute: false })
+    .use(Routes.Registration, Register, { isPrivateRoute: false })
+    .use(Routes.Profile, Profile, { isPrivateRoute: true })
+    .use(Routes.EditProfile, EditProfile, { isPrivateRoute: true })
+    .use(Routes.EditProfile, EditProfile, { isPrivateRoute: true })
+    .use(Routes.Chat, Messenger, { isPrivateRoute: true })
+    .use(Routes.Password, ChangePassword, { isPrivateRoute: true })
+    .use(Routes.Server, Error500, { isPrivateRoute: false })
+    .use(Routes.NotFound, Error404, { isPrivateRoute: false })
+    .redirect("/");
+
+  Router.start();
+});

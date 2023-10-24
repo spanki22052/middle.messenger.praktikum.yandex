@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { FormEventsInterface } from "./types";
 import FormValidator from "../FormValidator";
-import Block from "../Block";
+import { Block } from "../Block";
 
 const formEvents: FormEventsInterface = {
   focus: (event: Event) => {
@@ -34,7 +36,6 @@ const formEvents: FormEventsInterface = {
 
     const { value } = element;
     Object.assign(state, { [elementName]: value });
-    console.log("formInputValues", state);
   },
 
   submit: (event, state) => {
@@ -65,14 +66,17 @@ const formEvents: FormEventsInterface = {
       repeatPasswordValue &&
       passwordValue !== repeatPasswordValue
     ) {
-      //@ts-ignore
-      document.getElementById(passwordId).nextElementSibling!.textContent =
-        "passwords do not match";
+      const passwordElement = document.getElementById(passwordId);
 
-      //@ts-ignoreo
-      document.getElementById(
-        repeatPasswordId
-      ).nextElementSibling!.textContent = "passwords do not match";
+      if (passwordElement !== null)
+        passwordElement.nextElementSibling!.textContent =
+          "passwords do not match";
+
+      const repeatPasswordElement = document.getElementById(repeatPasswordId);
+
+      if (repeatPasswordElement !== null)
+        repeatPasswordElement.nextElementSibling!.textContent =
+          "passwords do not match";
     }
 
     console.log(

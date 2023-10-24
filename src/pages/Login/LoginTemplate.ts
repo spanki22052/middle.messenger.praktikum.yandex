@@ -8,7 +8,7 @@ export default `
     <div class="auth-buttons">
     {{{button}}}
     
-    <div class='custom-link'><a href="/register">Нет аккаунта?</a></div>
+    <div class='custom-link'><a href="/sign-up">Нет аккаунта?</a></div>
     <a href="/messenger">Войти</a>
     </div>
 
