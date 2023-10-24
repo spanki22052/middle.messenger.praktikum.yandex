@@ -17,7 +17,8 @@
     "stylelint": "stylelint **/*.scss --fix",
     "precommit": "lint-staged",
     "eslint:fix": "lint-staged \"**/*.{ts,js,jsx,tsx}\"",
-    "lint": "npm run eslint:fix && npm run stylelint"
+    "lint": "npm run eslint:fix && npm run stylelint",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
@@ -43,7 +44,7 @@
     "css-loader": "^6.7.3",
     "eslint": "^8.39.0",
     "eslint-plugin-import": "^2.27.5",
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
     "parcel": "^2.8.3",
     "parcel-bundler": "^1.12.5",
     "path-browserify": "^1.0.1",
