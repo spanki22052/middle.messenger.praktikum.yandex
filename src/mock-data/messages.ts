@@ -1,4 +1,4 @@
-import avatar from "../assets/images/avatar.avif";
+import avatar from "../assets/userAvatar";
 
 export const messages = [
   {

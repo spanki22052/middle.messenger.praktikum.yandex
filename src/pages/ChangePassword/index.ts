@@ -5,7 +5,7 @@ import ChangePasswordTemplate from "./ChangePasswordTemplate";
 import { Input } from "../../components/Input";
 import formEvents from "../../core/formEvents";
 import { Button } from "../../components/Button";
-import avatar from "../../assets/images/avatar.avif";
+import avatar from "../../assets/userAvatar";
 import { PropsType } from "../../types";
 import FormValidator from "../../core/FormValidator";
 import UserProfileController from "../../controllers/userProfileController";

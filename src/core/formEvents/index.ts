@@ -66,14 +66,17 @@ const formEvents: FormEventsInterface = {
       repeatPasswordValue &&
       passwordValue !== repeatPasswordValue
     ) {
-      //@ts-ignore
-      document.getElementById(passwordId).nextElementSibling!.textContent =
-        "passwords do not match";
+      const passwordElement = document.getElementById(passwordId);
 
-      //@ts-ignoreo
-      document.getElementById(
-        repeatPasswordId
-      ).nextElementSibling!.textContent = "passwords do not match";
+      if (passwordElement !== null)
+        passwordElement.nextElementSibling!.textContent =
+          "passwords do not match";
+
+      const repeatPasswordElement = document.getElementById(repeatPasswordId);
+
+      if (repeatPasswordElement !== null)
+        repeatPasswordElement.nextElementSibling!.textContent =
+          "passwords do not match";
     }
 
     console.log(

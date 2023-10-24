@@ -2,8 +2,7 @@
 import template from "./SearchedUsersTemplate";
 import { Block } from "../../core/Block";
 
-//@ts-ignore
-import avatar from "../../assets/images/avatar.avif";
+import avatar from "../../assets/userAvatar";
 
 import { BASE_URL_RESOUCES } from "../../core/HTTP";
 

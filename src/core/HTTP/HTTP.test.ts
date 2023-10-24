@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable import/no-named-as-default-member */
 /* eslint-disable import/named */
 import sinon, {
@@ -14,8 +15,7 @@ describe("Test HTTP", () => {
   beforeEach(() => {
     xhr = sinon.useFakeXMLHttpRequest();
 
-    // @ts-ignore
-    global.XMLHttpRequest = xhr;
+    global.XMLHttpRequest = xhr as any;
 
     xhr.onCreate = (request: SinonFakeXMLHttpRequest) => {
       requests.push(request);

@@ -8,8 +8,7 @@ import ChatController from "../../controllers/chatController";
 
 import { BASE_URL_RESOUCES } from "../../core/HTTP";
 
-//@ts-ignore
-import avatar from "../../assets/images/avatar.avif";
+import avatar from "../../assets/userAvatar";
 import { StateInterface } from "../../types";
 import { AddStoreToBlock } from "../../core/AddStoreToBlock";
 import Store from "../../core/Store";

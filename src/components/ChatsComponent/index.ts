@@ -2,10 +2,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { Block } from "../../core/Block";
 import template from "./ChatsComponentTemplate";
-//@ts-ignore
-import userPicture from "../../assets/images/avatar.avif";
-//@ts-ignore
-import moreOptions from "../../assets/images/dots.svg";
+import userPicture from "../../assets/userAvatar";
 import SendMessage from "../SendMessage";
 import NoSelectedChat from "../NoSelectedChatComponent";
 import { Message, StateInterface } from "../../types";
@@ -36,6 +33,7 @@ class ChatsComponent extends Block {
     const noSelectedChat = new NoSelectedChat();
     const isEmptyChat =
       renderProps?.noChats === false ? renderProps.noChats : true;
+    const moreOptions = "https://www.svgrepo.com/show/124304/three-dots.svg";
 
     super(
       "div",

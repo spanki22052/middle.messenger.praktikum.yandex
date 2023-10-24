@@ -2,7 +2,7 @@ import { Block } from "../../core/Block";
 import EditProfileTemplate from "./EditProfileTemplate";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
-import avatar from "../../assets/images/avatar.avif";
+import avatar from "../../assets/userAvatar";
 import { PropsType } from "../../types";
 import FormValidator from "../../core/FormValidator";
 import UserProfileController from "../../controllers/userProfileController";
@@ -14,7 +14,7 @@ import { AddStoreToBlock } from "../../core/AddStoreToBlock";
 
 class EditProfile extends Block {
   constructor(props: PropsType) {
-    const defaultPicture = avatar[0].avatar;
+    const defaultPicture = avatar;
     const userPicture = new EditablePicture({
       avatar: props.avatar ? props.avatar : defaultPicture,
     });
