@@ -1,6 +1,6 @@
 import { FormEventsInterface } from "./types";
 import FormValidator from "../FormValidator";
-import Block from "../Block";
+import { Block } from "../Block";
 
 const formEvents: FormEventsInterface = {
   focus: (event: Event) => {

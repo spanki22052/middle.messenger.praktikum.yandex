@@ -1,12 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import template from "./ChatsComponentTemplate";
+//@ts-ignore
 import userPicture from "../../assets/images/avatar.avif";
+//@ts-ignore
 import moreOptions from "../../assets/images/dots.svg";
 import SendMessage from "../SendMessage";
 import NoSelectedChat from "../NoSelectedChatComponent";
-import { PropsType, Message, StateInterface } from "../../types";
+import { Message, StateInterface } from "../../types";
 import { BASE_URL_RESOUCES } from "../../core/HTTP";
 import { AddStoreToBlock } from "../../core/AddStoreToBlock";
 import MessageComponent from "../Message";
@@ -15,13 +17,24 @@ import ChatController from "../../controllers/chatController";
 import AddUsers from "../AddUsers";
 import SearchedUsers from "../SearchedUsersComponent";
 import DeleteUsers from "../DeleteUsers";
+import {
+  EventInterface,
+  MetaPropsInterface,
+  RenderElementProps,
+} from "../../core/Block/types";
 
 class ChatsComponent extends Block {
-  constructor(props: PropsType) {
+  constructor(
+    _tagName?: string,
+    props?: MetaPropsInterface,
+    renderProps?: RenderElementProps,
+    _events?: EventInterface
+  ) {
     const defaultPicture = userPicture;
     const sendMessage = new SendMessage({});
     const noSelectedChat = new NoSelectedChat();
-    const isEmptyChat = props?.noChats === false ? props.noChats : true;
+    const isEmptyChat =
+      renderProps?.noChats === false ? renderProps.noChats : true;
 
     super(
       "div",
@@ -29,8 +42,8 @@ class ChatsComponent extends Block {
         ...props,
         isEmptyChat,
         baseUrl: BASE_URL_RESOUCES,
-        activeChat: props.activeChat,
-        chosenUser: props.chosenUser,
+        activeChat: props?.activeChat,
+        chosenUser: props?.chosenUser,
         messages: props?.messages,
         avatar: userPicture,
       },
@@ -39,7 +52,7 @@ class ChatsComponent extends Block {
         sendMessage,
         defaultPicture,
         moreOptions,
-        messageComponents: props.messageComponents,
+        messageComponents: renderProps?.messageComponents,
       },
       {
         click: (event: Event) => {
@@ -118,7 +131,7 @@ function addStateToProps(state: StateInterface) {
       chosenUser: null,
       activeChat: null,
       messages: [],
-      avatar: this.chosenUser?.avatar || userPicture,
+      avatar: state.chosenUser?.avatar || userPicture,
     };
   }
 
@@ -147,4 +160,4 @@ function addStateToProps(state: StateInterface) {
 
 const chatsContent = AddStoreToBlock(ChatsComponent, addStateToProps);
 
-export default new chatsContent();
+export default new chatsContent({});

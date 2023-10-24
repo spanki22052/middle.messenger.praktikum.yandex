@@ -1,4 +1,6 @@
-import Block from "../Block";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+import { Block } from "../Block";
 import renderDOM from "../renderDom";
 
 function isEqual(lhs: string, rhs: string) {
@@ -8,7 +10,7 @@ function isEqual(lhs: string, rhs: string) {
 export default class Route {
   protected _pathname: string;
 
-  protected _blockClass: Block;
+  protected _blockClass: Block | any;
 
   _block: Block | null;
 
@@ -29,16 +31,17 @@ export default class Route {
   }
 
   leave() {
-    this._block = null;
+    if (this._block) {
+      this._block = null;
+    }
   }
 
   match(pathname: string) {
     return isEqual(pathname, this._pathname);
   }
-
   render() {
     this._block = new this._blockClass(this._props);
 
-    renderDOM(this._block, "root");
+    renderDOM(this._block!, "root");
   }
 }

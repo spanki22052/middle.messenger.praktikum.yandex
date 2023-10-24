@@ -1,6 +1,6 @@
 import template from "./SelectChatComponent";
 
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 
 import { AddStoreToBlock } from "../../core/AddStoreToBlock";
 

@@ -1,5 +1,5 @@
 import template from "./InputTemplate";
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import formEvents from "../../core/formEvents";
 
 type InputPropsType = { [key: string]: string };

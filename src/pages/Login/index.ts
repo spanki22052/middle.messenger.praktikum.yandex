@@ -1,4 +1,4 @@
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import { InputWithLayout } from "../../components/InputWithLayout";
 import { Button } from "../../components/Button";
 import LoginTemplate from "./LoginTemplate";

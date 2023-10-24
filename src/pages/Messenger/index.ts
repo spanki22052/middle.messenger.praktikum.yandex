@@ -1,4 +1,4 @@
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import MessengerTemplate from "./MessengerTemplate";
 import ChatSearchInput from "../../components/ChatSearchInput";
 import AddUsers from "../../components/AddUsers";

@@ -1,5 +1,5 @@
 import template from "./ExitButtonTemplate";
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import ChatController from "../../controllers/chatController";
 import Router from "../../core/Router";
 import { PropsType } from "../../types";

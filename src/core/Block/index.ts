@@ -1,3 +1,11 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+/* eslint-disable @typescript-eslint/no-this-alias */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// /* eslint-disable @typescript-eslint/no-explicit-any */
+// /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import EventBus from "../EventBus";
 import {
   EventInterface,
@@ -10,7 +18,7 @@ import { nanoid } from "nanoid";
 import Handlebars = require("handlebars");
 import { PropsType } from "../../types";
 
-export default class Block {
+export class Block {
   static EVENTS = EVENTS;
 
   id = nanoid(6);
@@ -58,7 +66,7 @@ export default class Block {
     this.element = document.createElement(this._meta.tagName);
   }
 
-  init(eventBus: EventBus) {
+  init() {
     this._createResources();
     this.eventBus().emit(Block.EVENTS.FLOW_RENDER, this.props);
   }

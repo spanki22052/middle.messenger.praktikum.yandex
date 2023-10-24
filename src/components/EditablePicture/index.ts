@@ -1,5 +1,5 @@
 import template from "./EditablePictureTemplate";
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import UserProfileController from "../../controllers/userProfileController";
 import { PropsType } from "../../types";
 import Button from "../ButtonComponent";
@@ -12,9 +12,11 @@ export default class EditablePicture extends Block {
       className: "custom-button",
     });
 
+    console.log(props);
+
     super(
       "div",
-      props,
+      { ...props, avatar: props.avatar },
       { button },
       {
         change: (event: Event) => {

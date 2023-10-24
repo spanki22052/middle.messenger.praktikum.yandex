@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import template from "./AddUsersTemplate";
 
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import Store from "../../core/Store";
 
 import UserProfileController from "../../controllers/userProfileController";
@@ -11,7 +11,6 @@ import SearchedUsers from "../SearchedUsersComponent";
 import { PropsType } from "../../types";
 import { Input } from "../Input";
 import { Button } from "../Button";
-import ChatList from "../ChatListComponent";
 
 class AddUser extends Block {
   constructor(props: PropsType) {
@@ -72,19 +71,21 @@ class AddUser extends Block {
           event.preventDefault();
           const chatId = Store.getState().activeChat?.id;
 
-          document.querySelector(".chat-searchbar").setAttribute("value", "");
+          document.querySelector(".chat-searchbar")?.setAttribute("value", "");
 
-          const selectedUserId = SearchedUsers.props.selectedUsers.map(
+          const selectedUserId = SearchedUsers.props.selectedUsers?.map(
             (select: PropsType) => select.id
           );
 
-          const request = JSON.stringify({
-            users: [...selectedUserId],
-            chatId,
-          });
+          if (selectedUserId) {
+            const request = JSON.stringify({
+              users: [...selectedUserId],
+              chatId,
+            });
 
-          ChatController.addUsersToChat(request);
-          UserProfileController.searchUserByLogin("clear", SearchedUsers);
+            ChatController.addUsersToChat(request);
+            UserProfileController.searchUserByLogin("clear", SearchedUsers);
+          }
         },
       }
     );

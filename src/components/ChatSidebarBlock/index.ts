@@ -1,4 +1,4 @@
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import { MetaPropsInterface } from "../../core/Block/types";
 import ChatSidebarBlockTemplate from "./ChatSidebarBlockTemplate";
 

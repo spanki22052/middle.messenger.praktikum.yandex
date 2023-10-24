@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 /* eslint-disable @typescript-eslint/no-this-alias */
 import template from "./MessageInputTemplate";
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import { formEvents } from "../../core/formEvents";
 
 type InputPropsType = { [key: string]: string };

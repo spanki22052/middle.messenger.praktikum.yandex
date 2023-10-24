@@ -21,6 +21,7 @@ export interface MetaPropsInterface {
   text?: string;
   className?: string;
   openedPop?: boolean;
+  title?: string;
   activeChat?: ActiveChat;
   messages?: Message[];
   name?: string;

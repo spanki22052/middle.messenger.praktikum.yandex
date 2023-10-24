@@ -1,5 +1,4 @@
 import { EventBusArgsInterface } from "./types";
-import { PropsType } from "../../types";
 
 export default class EventBus {
   listeners: { [key: string]: Array<(args: EventBusArgsInterface) => void> };
@@ -8,7 +7,8 @@ export default class EventBus {
     this.listeners = {};
   }
 
-  on(event: string, callback: (args: EventBusArgsInterface) => void) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  on(event: string, callback: (args: any) => void) {
     if (!this.listeners[event]) this.listeners[event] = [];
 
     this.listeners[event].push(callback);
@@ -26,7 +26,7 @@ export default class EventBus {
     delete this.listeners[event];
   }
 
-  emit(event: string, ...args) {
+  emit(event: string, ...args: any[]) {
     if (!this.listeners[event]) throw new Event(`Нет такого события ${event}`);
 
     this.listeners[event].forEach((listener) => listener(args));

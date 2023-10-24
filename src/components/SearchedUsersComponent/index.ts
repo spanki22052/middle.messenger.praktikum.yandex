@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import template from "./SearchedUsersTemplate";
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 
+//@ts-ignore
 import avatar from "../../assets/images/avatar.avif";
 
 import { BASE_URL_RESOUCES } from "../../core/HTTP";
@@ -29,15 +30,15 @@ class SearchedUsers extends Block {
 
             const selectUserId = Number(user.dataset.userId);
 
-            const chosenUser = this.props.users.filter(
+            const chosenUser = this.props?.users?.filter(
               (user: PropsType) => selectUserId === user.id
             );
 
-            const isSelected = this.props.selectedUsers.find(
+            const isSelected = this.props.selectedUsers?.find(
               (user: PropsType) => selectUserId === user.id
             );
 
-            if (!isSelected) {
+            if (!isSelected && this.props.selectedUsers && chosenUser) {
               const selectedUsers = [
                 ...this.props.selectedUsers,
                 ...chosenUser,
@@ -45,7 +46,7 @@ class SearchedUsers extends Block {
 
               this.setProps({
                 selectedUsers,
-                users: this.props.users.filter(
+                users: this.props.users?.filter(
                   (user: PropsType) => selectUserId !== user.id
                 ),
               });
@@ -59,16 +60,19 @@ class SearchedUsers extends Block {
 
             const selectUserId = Number(user.dataset.userId);
 
-            const chosenUser = this.props.selectedUsers.filter(
+            const chosenUser = this.props.selectedUsers?.filter(
               (user: PropsType) => selectUserId === user.id
             );
 
-            const unSelectedUsers = this.props.selectedUsers.filter(
+            const unSelectedUsers = this.props.selectedUsers?.filter(
               (user: PropsType) => selectUserId === user.id
             );
 
-            const selectedUsers = [...unSelectedUsers];
-            const users = [...chosenUser, ...this.props.users];
+            const selectedUsers = unSelectedUsers ? [...unSelectedUsers] : [];
+            const users =
+              chosenUser && this.props.users
+                ? [...chosenUser, ...this.props.users]
+                : [];
 
             this.setProps({
               selectedUsers,

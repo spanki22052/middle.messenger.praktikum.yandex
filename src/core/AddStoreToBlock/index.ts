@@ -1,5 +1,5 @@
-import Block from "../Block";
 import { PropsType } from "../../types";
+import { Block } from "../Block";
 import Store from "../Store";
 
 export function AddStoreToBlock(
@@ -8,7 +8,7 @@ export function AddStoreToBlock(
 ) {
   return class extends BlockComponent {
     constructor(props: PropsType) {
-      super({ ...props, ...addStateToProps(Store.getState()) });
+      super("div", { ...props, ...addStateToProps(Store.getState()) });
 
       Store.on("set-state", () => {
         this.setProps({ ...addStateToProps(Store.getState()) });

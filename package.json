@@ -10,7 +10,7 @@
     "node": ">=12"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "parcel static/index.html --no-cache --port 3000",
     "dev": "parcel static/index.html --no-cache",
     "build": "npx -p parcel-bundler parcel build static/index.html",
@@ -65,15 +65,24 @@
   },
   "dependencies": {
     "@parcel/transformer-css": "^2.8.3",
+    "@types/chai": "^4.3.9",
+    "@types/mocha": "^10.0.3",
+    "@types/sinon": "^10.0.20",
+    "chai": "^4.3.10",
     "express": "4.18.2",
-    "handlebars": "^4.7.7",
+    "handlebars": "^4.7.8",
+    "jsdom": "^22.1.0",
     "lint-staged": "^13.2.3",
-    "nanoid": "^4.0.2",
+    "mini-css-extract-plugin": "^2.7.6",
+    "mocha": "^10.2.0",
+    "nanoid": "3",
     "nodemon": "2.0.21",
     "parcel-plugin-pug": "0.3.1",
     "pug": "3.0.2",
     "pug-cli": "^1.0.0-alpha6",
     "pug-runtime": "^3.0.1",
+    "sinon": "^17.0.0",
+    "ts-node": "^10.9.1",
     "vite": "^4.4.9",
     "vite-plugin-checker": "^0.6.1"
   }

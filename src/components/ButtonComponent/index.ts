@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import template from "./ButtonTemplate";
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 
 export default class Button extends Block {
   constructor(

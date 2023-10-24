@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import template from "./DeleteUsersTemplate";
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import SearchedUsers from "../SearchedUsersComponent";
 import Button from "../ButtonComponent";
 import ChatController from "../../controllers/chatController";

@@ -1,11 +1,4 @@
 {
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ],
   "compilerOptions": {
     "target": "es2019",
     "declaration": false,
@@ -18,5 +11,8 @@
     "esModuleInterop": true,
     "typeRoots": ["node_modules/@types", "src/typings/app.d.ts"],
     "outDir": "dist"
-  }
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"],
+  "ts-node": { "files": true }
 }

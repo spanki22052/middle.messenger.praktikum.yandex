@@ -1,4 +1,4 @@
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import template from "./ChatSearchInputTemplate";
 import UserProfileController from "../../controllers/userProfileController";
 import { Button } from "../Button";

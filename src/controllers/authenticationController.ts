@@ -84,12 +84,18 @@ class AuthenticationController extends GeneralController {
 
   async logout() {
     try {
+      const response = await AuthenticationAPI.logout();
+
       this.redirect("/", 0);
       Router.go("/");
 
       MessageController.close();
 
       Store.removeState();
+
+      if (response) {
+        return true;
+      }
     } catch (err) {
       console.log(err);
     }

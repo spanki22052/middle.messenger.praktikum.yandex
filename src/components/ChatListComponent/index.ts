@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import template from "./ChatListTemplate";
 
 import UserProfileController from "../../controllers/userProfileController";

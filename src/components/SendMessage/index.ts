@@ -1,4 +1,4 @@
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import template from "./SendMessageTemplate";
 // import { formEvents } from "../../core/formEvents";
 import MessageController from "../../controllers/messageController";

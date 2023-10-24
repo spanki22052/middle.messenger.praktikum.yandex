@@ -1,5 +1,5 @@
 import Store from "../core/Store";
-import Block from "../core/Block";
+import { Block } from "../core/Block";
 
 import ChatList from "../components/ChatListComponent";
 

@@ -1,7 +1,6 @@
 import Router from "../core/Router";
 
 import { PropsType } from "../types";
-import Route from "../core/Route";
 
 export default class GeneralController {
   redirect(pathname: string, time: number) {

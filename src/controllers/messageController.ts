@@ -82,8 +82,10 @@ class MessageController {
   }
 
   addEvents(chatId: number) {
-    this.socket.on("new-websocket-message", (message: Message | Message[]) => {
-      this.setMessages(chatId, message);
+    this.socket.on("new-websocket-message", (args: Message | Message[]) => {
+      console.log(args);
+
+      this.setMessages(chatId, args);
     });
 
     this.socket.on("close-websocket", () => {

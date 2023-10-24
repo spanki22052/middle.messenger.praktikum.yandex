@@ -1,4 +1,4 @@
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import { MetaPropsInterface } from "../../core/Block/types";
 import formEvents from "../../core/formEvents";
 import InputTemplate from "./InputTemplate";

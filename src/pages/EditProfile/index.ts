@@ -1,9 +1,8 @@
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import EditProfileTemplate from "./EditProfileTemplate";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
-import { avatar } from "../../mock-data/avatar";
-import avatarImg from "../../assets/images/avatar.avif";
+import avatar from "../../assets/images/avatar.avif";
 import { PropsType } from "../../types";
 import FormValidator from "../../core/FormValidator";
 import UserProfileController from "../../controllers/userProfileController";
@@ -18,11 +17,11 @@ class EditProfile extends Block {
     const state = {};
     const defaultPicture = avatar[0].avatar;
     const userPicture = new EditablePicture({
-      avatar: props.avatar ? BASE_URL_RESOUCES + props.avatar : defaultPicture,
+      avatar: props.avatar ? props.avatar : defaultPicture,
     });
 
     const exitButton = new ExitButton({
-      path: "/messenger",
+      path: "/profile",
     });
 
     const email = new Input({
@@ -80,7 +79,10 @@ class EditProfile extends Block {
 
     super(
       "div",
-      { avatar: avatarImg },
+      {
+        ...props,
+        avatar: props.avatar ? BASE_URL_RESOUCES + props.avatar : avatar,
+      },
       {
         email,
         login,
@@ -140,7 +142,7 @@ function addStateToProps(state: PropsType) {
       second_name: user.second_name,
       display_name: `${user.first_name} ${user.second_name} `,
       phone: user.phone,
-      avatar: user.avatar ? user.avatar : avatar,
+      avatar: user.avatar ? BASE_URL_RESOUCES + user.avatar : avatar,
     };
   } else {
     return {

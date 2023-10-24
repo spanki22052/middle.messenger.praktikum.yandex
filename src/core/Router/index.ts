@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import Route from "../Route";
 import Store from "../Store";
 
 class Router {
-  private routes: Route[] = [];
+  routes: Route[] = [];
 
   private history = window.history;
 
@@ -53,7 +55,6 @@ class Router {
 
     this._currentRoute = route;
 
-    route.leave();
     route.render();
   }
 

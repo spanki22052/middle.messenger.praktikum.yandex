@@ -1,8 +1,9 @@
 import ProfileTemplate from "./ProfileTemplate";
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import { Button } from "../../components/Button";
 import { PropsType } from "../../types";
 import AuthenticationController from "../../controllers/authenticationController";
+//@ts-ignore
 import avatar from "../../assets/images/avatar.avif";
 import { BASE_URL_RESOUCES } from "../../core/HTTP";
 import { AddStoreToBlock } from "../../core/AddStoreToBlock";

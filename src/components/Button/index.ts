@@ -1,5 +1,5 @@
 import { MetaPropsInterface } from "../../core/Block/types";
-import Block from "../../core/Block";
+import { Block } from "../../core/Block";
 import ButtonTemplate from "./ButtonTemplate";
 
 export class Button extends Block {
