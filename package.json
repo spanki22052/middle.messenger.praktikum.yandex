@@ -54,11 +54,11 @@
     "ts-node": "^10.9.1",
     "eslint-plugin-import": "^2.27.5",
     "vite-plugin-html-template": "^0.1.0",
+    "chai": "^4.3.10",
     "css-loader": "^6.7.3",
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "chai": "^4.3.10",
     "express": "4.18.2",
     "handlebars": "^4.7.8",
     "jsdom": "^22.1.0",
