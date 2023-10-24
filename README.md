@@ -27,4 +27,4 @@
 
 ### Ссылка на netlify
 
-- <a href="https://deploy-preview-8--adorable-khapse-88c028.netlify.app/" target="_blank"> https://deploy-preview-8--adorable-khapse-88c028.netlify.app/ </a>
+- <a href="https://adorable-khapse-88c028.netlify.app/" target="_blank">https://adorable-khapse-88c028.netlify.app/ </a>
