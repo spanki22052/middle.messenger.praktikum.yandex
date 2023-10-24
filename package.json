@@ -13,7 +13,7 @@
     "test": "mocha",
     "start": "vite",
     "dev": "vite --port 3000 --host",
-    "build": "rimraf ./dist/* && vite build",
+    "build": "vite build",
     "stylelint": "stylelint **/*.scss --fix",
     "precommit": "lint-staged",
     "eslint:fix": "eslint src/",
