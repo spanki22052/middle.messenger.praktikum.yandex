@@ -25,6 +25,7 @@ export default class SendMessage extends Block {
           const validateForm = FormValidator.validateSubmit(messageInput);
 
           const input = messageInput.elements[
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             messageInputName as any
           ] as HTMLInputElement;
 

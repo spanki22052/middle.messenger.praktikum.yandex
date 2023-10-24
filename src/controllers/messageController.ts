@@ -14,6 +14,7 @@ class MessageController {
 
     const store = Store.getState() as StateInterface;
 
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const userId = store.user!.id;
 
     this.socket = new UseWebSocket(`${WWS_URL}/${userId}/${chatId}/${token}`);
@@ -36,6 +37,7 @@ class MessageController {
   }
 
   setMessages(chatId: number, messages: Message | Message[]) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let newMessages: any = [];
 
     if (Array.isArray(messages)) {

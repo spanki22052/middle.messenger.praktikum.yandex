@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
+/* eslint-disable @typescript-eslint/no-this-alias */
 import { Block } from "../../core/Block";
 import ChangePasswordTemplate from "./ChangePasswordTemplate";
 import { Input } from "../../components/Input";

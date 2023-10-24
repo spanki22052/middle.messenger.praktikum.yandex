@@ -10,6 +10,7 @@ describe("Test Link component", () => {
 
   it("should go to the clicked path", () => {
     const link = new Link({ path: "/" });
+    // eslint-disable-next-line import/no-named-as-default-member
     const spy = Sinon.spy(Router, "go");
     const element = link.element as HTMLAnchorElement;
 

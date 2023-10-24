@@ -14,7 +14,6 @@ import { AddStoreToBlock } from "../../core/AddStoreToBlock";
 
 class EditProfile extends Block {
   constructor(props: PropsType) {
-    const state = {};
     const defaultPicture = avatar[0].avatar;
     const userPicture = new EditablePicture({
       avatar: props.avatar ? props.avatar : defaultPicture,

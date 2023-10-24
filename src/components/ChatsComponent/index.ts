@@ -28,6 +28,7 @@ class ChatsComponent extends Block {
     _tagName?: string,
     props?: MetaPropsInterface,
     renderProps?: RenderElementProps,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     _events?: EventInterface
   ) {
     const defaultPicture = userPicture;

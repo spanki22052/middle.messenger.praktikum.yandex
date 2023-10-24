@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { EventBusArgsInterface } from "./types";
 
 export default class EventBus {

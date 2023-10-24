@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
+/* eslint-disable @typescript-eslint/no-this-alias */
 import template from "./InputTemplate";
 import { Block } from "../../core/Block";
 import formEvents from "../../core/formEvents";

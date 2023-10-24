@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
+/* eslint-disable @typescript-eslint/no-this-alias */
 import { Block } from "../../core/Block";
 import { RegisterPageTemplate } from "./RegisterPageTemplate";
 import { InputWithLayout } from "../../components/InputWithLayout";

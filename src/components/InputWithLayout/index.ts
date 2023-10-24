@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
+/* eslint-disable @typescript-eslint/no-this-alias */
 import { MetaPropsInterface } from "../../core/Block/types";
 import { Block } from "../../core/Block";
 import InputWithLayoutTemplate from "./InputWithLayoutTemplate";

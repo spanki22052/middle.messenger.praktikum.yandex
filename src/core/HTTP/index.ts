@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { PropsType } from "../../types";
 
 const BASE_URL = "https://ya-praktikum.tech/api/v2/";

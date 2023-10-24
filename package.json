@@ -16,7 +16,7 @@
     "build": "npx -p parcel-bundler parcel build static/index.html",
     "stylelint": "stylelint **/*.scss --fix",
     "precommit": "lint-staged",
-    "eslint:fix": "lint-staged \"**/*.{ts,js,jsx,tsx}\"",
+    "eslint:fix": "eslint src/",
     "lint": "npm run eslint:fix && npm run stylelint",
     "prepare": "husky install"
   },

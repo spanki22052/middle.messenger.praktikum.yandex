@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 type Indexed<T = any> = {
   [key in string]: T;
 };

@@ -31,6 +31,7 @@ export default class EditablePicture extends Block {
             fileReader.onload = function onload() {
               const image = pictureFile.previousElementSibling;
 
+              // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
               image!.setAttribute("src", fileReader.result as string);
 
               fileReader.onerror = function onerror() {

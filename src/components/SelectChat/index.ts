@@ -11,7 +11,6 @@ import ChatController from "../../controllers/chatController";
 import { BASE_URL_RESOUCES } from "../../core/HTTP";
 
 import { PropsType, StateInterface } from "../../types";
-import Store from "../../core/Store";
 
 class SelectChat extends Block {
   constructor(props: PropsType) {

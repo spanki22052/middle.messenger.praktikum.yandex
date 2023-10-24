@@ -4,6 +4,7 @@ import Store from "../Store";
 
 export function AddStoreToBlock(
   BlockComponent: typeof Block,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   addStateToProps: (state: any) => PropsType
 ) {
   return class extends BlockComponent {

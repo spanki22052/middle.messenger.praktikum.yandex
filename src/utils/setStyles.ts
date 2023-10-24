@@ -3,7 +3,7 @@ export type StylesType = {
 };
 
 const setStyles = (element: HTMLElement, styles: StylesType) => {
-  for (let s in styles) {
+  for (const s in styles) {
     element.style[s] = styles[s] || "";
   }
 };

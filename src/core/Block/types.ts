@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { StylesType } from "../../utils/setStyles";
 import { FormEventsInterface } from "../formEvents/types";
 
