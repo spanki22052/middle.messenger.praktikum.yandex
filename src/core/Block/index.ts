@@ -15,7 +15,7 @@ import {
   RenderElementProps,
 } from "./types";
 import { nanoid } from "nanoid";
-import Handlebars = require("handlebars");
+import Handlebars from "handlebars";
 import { PropsType } from "../../types";
 
 export class Block {

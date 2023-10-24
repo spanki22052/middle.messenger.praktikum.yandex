@@ -1,68 +1,45 @@
 import { defineConfig } from "vite";
-import { checker } from "vite-plugin-checker";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import path from "path";
+import { createHtmlPlugin } from "vite-plugin-html";
 
 export default defineConfig({
-  build: {
-    outDir: "dist",
-    assetsDir: "assets",
-    sourcemap: true,
-  },
-  resolve: {
-    extensions: [".ts", ".js", ".json", ".vue"],
-    alias: {
-      index: "/src/index.ts",
-      components: "/src/components",
-      utils: "/src/utils",
-      pages: "/src/pages",
-      api: "/src/api",
-      assets: "/src/assets",
-      controllers: "/src/controllers",
-      core: "/src/core",
-      mockData: "/src/mockData",
-      handlebars: "handlebars/dist/handlebars.min.js",
-    },
-  },
-  rules: [
-    {
-      test: /\.ts?$/,
-      exclude: /(node_modules)/,
-      use: "ts-loader",
-    },
-    {
-      test: /\.(png|jpe?g|gif|svg)$/i,
-      type: "asset/resource",
-    },
-    {
-      test: /\.(woff|woff2|eot|ttf|otf)$/i,
-      type: "asset/resource",
-    },
-    {
-      test: /\.css$/i,
-      use: [MiniCssExtractPlugin.loader, "css-loader"],
-    },
-    {
-      test: /\.scss$/i,
-      use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
-    },
-  ],
   plugins: [
-    checker({
-      typescript: true,
-      eslint: {
-        lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
-      },
-      overlay: {
-        initialIsOpen: false,
-      },
+    createHtmlPlugin({
+      template: "/index.html",
     }),
   ],
+  root: path.resolve(__dirname, "src"),
+  resolve: {
+    alias: {
+      "/@/": path.resolve(__dirname, "./src"),
+      "/index/": path.resolve(__dirname, "./src/index.ts"),
+      "/components/": path.resolve(__dirname, "./src/components"),
+      "/utils/": path.resolve(__dirname, "./src/utils"),
+      "/pages/": path.resolve(__dirname, "./src/pages"),
+      "/api/": path.resolve(__dirname, "./src/api"),
+      "/assets/": path.resolve(__dirname, "./src/assets"),
+      "/controllers/": path.resolve(__dirname, "./src/controllers"),
+      "/core/": path.resolve(__dirname, "./src/core"),
+      "/mockData/": path.resolve(__dirname, "./src/mockData"),
+      "/handlebars/": "handlebars/dist/handlebars.min.js",
+    },
+  },
+  optimizeDeps: {
+    include: ["dependency-package"],
+  },
+  build: {
+    outDir: "dist",
+    rollupOptions: {
+      input: {
+        app: "src/index.html",
+      },
+    },
+  },
   server: {
     port: 3000,
-    historyApiFallback: true,
-  },
-  devServer: {
-    port: 3000,
-    historyApiFallback: true,
+    strictPort: false,
+    hmr: {
+      overlay: true,
+    },
   },
 });
